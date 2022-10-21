@@ -30,6 +30,8 @@ h1 {
 }
 
 #face {
-  height: 100vh;
+  position: fixed;
+  height: 50vh;
   width: 100vw;
 }
+
