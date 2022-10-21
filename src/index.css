@@ -29,9 +29,29 @@ h1 {
   text-align: center;
 }
 
-#face {
-  position: fixed;
-  height: 50vh;
+.face {
+  height: 100vh;
   width: 100vw;
+  z-index: 11;
 }
 
+
+.space {
+  height: 10000px
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.2fr 0.3fr 0.5fr;
+}
+
+.grid-col {
+  background-color: white;
+  
+}
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+}
