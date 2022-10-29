@@ -35,9 +35,10 @@ const App = () => (
 
     <div className="about center">
       <motion.div
-        className="card front"
+        className="card front rb-glow"
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}>
+        whileInView={{ opacity: 1 }}
+        whileHover={{scale: 0.9}}>
         <h2>About</h2>
         <p className='sml-font'>
           I'm a developer and artist who loves working on amusing and challenging projects.
@@ -57,14 +58,21 @@ const App = () => (
     </div>
     <div className='screen-size'></div>
 
-    <div className="experience center">
-      <motion.div
-        className="card front"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}>
-        <h2>Experience</h2>
-        <p></p>
-      </motion.div>
+    
+    <div className="experience center timeline-container">
+      <h2>Experience</h2>
+      <br></br>
+      <div>
+        <motion.div
+          className="timeline-item front"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}> 
+          <h3>Software Engineer Intern</h3>
+          <h4>Knowde</h4>
+          
+          
+        </motion.div>
+      </div>
     </div>
   </div>
 

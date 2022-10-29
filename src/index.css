@@ -120,6 +120,13 @@ h2 {
   width: 100%;
 }
 
+.red-glow:hover {
+  outline: none;
+  box-shadow: linear-gradient(red, blue);
+}
+
+
+
 .card {
   background-color: white;
   border-radius: 5%;
@@ -146,6 +153,19 @@ h2 {
   font-size: var(--fs-sml)
 }
 
+.timeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+
+.timeline-item {
+  width: 40%;
+  height: 20%;
+  background-color: var(--off-white);
+  border-radius: 5%;
+  padding: 2.5%;
+}
 
 
