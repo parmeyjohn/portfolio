@@ -13,9 +13,9 @@
   --off-white: #F5EFED;
   --dark-green: #0F3F32;
   --med-green: #058264; 
-  --fs-sml: clamp(1rem, 6vw + 1rem, 2.5rem);
+  --fs-sml: 6vw;
   --fs-med: clamp(1.5rem, 6vw + 1rem, 4rem);
-  --fs-xl: clamp(3.5rem, 12vw + 1rem, 6rem);
+  --fs-xl: clamp(0.5rem, 8vw, 3.5rem);
 }
 
 *, *::before, *::after {
@@ -24,6 +24,7 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 html, body, div {
@@ -56,6 +57,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
   background-color: var(--black);
+  text-align: center;
 }
 
 p {
@@ -72,11 +74,7 @@ h4 {
   z-index: -15;
 }
 
-h1 {
-  font-size: var(--fs-xl);
-  text-align: center;
-  margin-top: 5rem;
-}
+
 
 h2 {
   color: var(--med-green);
@@ -92,7 +90,6 @@ h2 {
 .face {
   width: 100%;
   height: 100%;
-  margin-bottom: 5%;
   position: fixed;
 }
 
@@ -116,8 +113,8 @@ h2 {
 }
 
 .screen-size {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 .red-glow:hover {
@@ -131,17 +128,16 @@ h2 {
   background-color: white;
   border-radius: 5%;
   padding: 2.5%;
-  width: 50%;
-  height: 100%;
+  min-width: 50%;
+  max-width: 90%;
+  height: auto;
+  display: none;
 }
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100vw;
-  max-width: 100%;
 }
 
 
@@ -153,19 +149,58 @@ h2 {
   font-size: var(--fs-sml)
 }
 
-.timeline-container {
+.tl-container {
+  
   display: flex;
-  align-items: center;
-  justify-content: center;
-
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+  width: 100%;
+  padding: 15%;
+  
 }
 
-.timeline-item {
-  width: 40%;
-  height: 20%;
+.tl-line {
+  position: absolute;
+  border-left: 12px solid 1;
+  border-image: linear-gradient(to bottom, red, blue) 1 100%;
+  margin-left: -3 px;
+}
+
+.tl-item {
   background-color: var(--off-white);
   border-radius: 5%;
   padding: 2.5%;
+  height: auto;
+  width: 45%;
+  margin: 5rem 0 0 0;
+  z-index: 15;
 }
 
+.tl-content {
+  padding: 10%;
+}
+.no-point {
+  pointer-events: none;
+}
 
+.tl-item:nth-child(odd) {
+  justify-content: start;
+  align-self: flex-start;
+}
+
+.tl-item:nth-child(even) {
+  justify-content: end;
+  align-self: flex-end;
+}
+
+#title {
+  margin: 0;
+  padding: 0;
+  font-size: var(--fs-xl);
+  text-align: center;
+  position: absolute;
+  padding: 4rem;
+  padding-top: 10rem;
+  display: none;
+}

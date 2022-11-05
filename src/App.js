@@ -25,15 +25,18 @@ const Project = ({title, image, alt}) => {
 
 const App = () => (
   <div>
-    <div className='screen-size'>
+    <div id='title' className="no-point front">
       <h1>It's-a me...John.</h1>
+    </div>
+    <div className='screen-size'></div>
+
       <div className='face'>
         <Spline scene="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode" />
       </div>
-    </div>
+    
     
 
-    <div className="about center">
+    <div id='about' className="center no-point">
       <motion.div
         className="card front rb-glow"
         initial={{ opacity: 0 }}
@@ -51,29 +54,73 @@ const App = () => (
           <ul>
             <li>Favorite emoji: 🤠</li>
             <li>Favorite food: Spaghetti</li>
+            <li>Favorite keyboard switches: MX Brown</li>
+            <li>Favorite Disney movie: Aladdin</li>
           </ul>
         </p>
       </motion.div>
       
     </div>
     <div className='screen-size'></div>
-
     
-    <div className="experience center timeline-container">
+    <div id='experience'>
       <h2>Experience</h2>
-      <br></br>
-      <div>
+      
+      <div className="tl-container front no-point">
+        
+        <div className='tl-item front'>
+          <div className='tl-content'>
+            UCI
+          </div>
+        </div>
+        <div className='tl-item'>
+          <div className='tl-content'>
+            UCI
+          </div>
+        </div>
+        <div className='tl-item'>
+          <div className='tl-content'>
+            UCI
+          </div>
+        </div>
+        <div className='tl-item'>
+          <div className='tl-content'>
+            UCI
+          </div>
+        </div>
+        <div className='tl-line'></div>
+      </div>
+    </div>
+    
+    
+    <motion.div
+        className="timeline-item-left front"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}> 
+        <h3>B.S. in Computer Science</h3>
+        <h4>UCI</h4>
+        <p>Heyoooo</p>
+        
+        
+      </motion.div>
+
+
+
+
         <motion.div
-          className="timeline-item front"
+          className="timeline-item-right front"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}> 
           <h3>Software Engineer Intern</h3>
           <h4>Knowde</h4>
+          <p>Heyoooo</p>
           
           
         </motion.div>
-      </div>
-    </div>
+  <p>
+    This website is inspired by <a href='https://www.youtube.com/watch?v=2ccwFGUL1SU'>the title screen in Mario 64</a>
+    and the old promo Nintendo renders for the game <a> link here</a>
+  </p>
   </div>
 
 )
