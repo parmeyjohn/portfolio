@@ -15,7 +15,7 @@
   --med-green: #058264; 
   --fs-sml: 6vw;
   --fs-med: clamp(1.5rem, 6vw + 1rem, 4rem);
-  --fs-xl: clamp(0.5rem, 8vw, 3.5rem);
+  --fs-xl: 2em;
 }
 
 *, *::before, *::after {
@@ -90,7 +90,12 @@ h2 {
 .face {
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: -1000;
+  background-color: blue;
 }
 
 .front {
@@ -115,6 +120,8 @@ h2 {
 .screen-size {
   height: 100vh;
   width: 100vw;
+  position: relative;
+  z-index: 0;
 }
 
 .red-glow:hover {
@@ -131,7 +138,9 @@ h2 {
   min-width: 50%;
   max-width: 90%;
   height: auto;
-  display: none;
+  position: relative;
+  text-align:left;
+  z-index: 0;
 }
 
 .center {
@@ -199,8 +208,8 @@ h2 {
   padding: 0;
   font-size: var(--fs-xl);
   text-align: center;
+  padding: 1rem;
+  padding-top: 5rem;
   position: absolute;
-  padding: 4rem;
-  padding-top: 10rem;
-  display: none;
+  z-index: 1000;
 }

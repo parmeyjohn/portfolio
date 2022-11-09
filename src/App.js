@@ -25,16 +25,13 @@ const Project = ({title, image, alt}) => {
 
 const App = () => (
   <div>
-    <div id='title' className="no-point front">
-      <h1>It's-a me...John.</h1>
+    <div id='title' className="no-point">
+      <h1>It's-a me... John.</h1>
+    </div>
+    <div className='face'>
+      <Spline scene="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode" />
     </div>
     <div className='screen-size'></div>
-
-      <div className='face'>
-        <Spline scene="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode" />
-      </div>
-    
-    
 
     <div id='about' className="center no-point">
       <motion.div
@@ -119,7 +116,7 @@ const App = () => (
         </motion.div>
   <p>
     This website is inspired by <a href='https://www.youtube.com/watch?v=2ccwFGUL1SU'>the title screen in Mario 64</a>
-    and the old promo Nintendo renders for the game <a> link here</a>
+    and the old promo Nintendo renders for the game 
   </p>
   </div>
 
