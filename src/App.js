@@ -26,37 +26,43 @@ const Project = ({title, image, alt}) => {
 const App = () => (
   <div>
     <div id='title' className="no-point">
-      <h1>It's-a me... John.</h1>
+      <h1>
+        It's-a me... 
+        <br></br>
+        <span className='name'>John.</span>
+        </h1>
     </div>
+    <p>hey gjrjgorejgjreojgj</p>
     <div className='face'>
       <Spline scene="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode" />
     </div>
     <div className='screen-size'></div>
-
-    <div id='about' className="center no-point">
-      <motion.div
-        className="card front rb-glow"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        whileHover={{scale: 0.9}}>
-        <h2>About</h2>
-        <p className='sml-font'>
-          I'm a developer and artist who loves working on amusing and challenging projects.
-          <br></br>
-          I like learning new techniques and technologies that let me express myself in distinct ways.
-          <br></br>
-          I just graduated from UCI and right now I'm looking for new opportunities that push my limits and contribute to a meaningful product.
-          <br></br>
-          Here are some completely irrelevant facts about myself:
-          <ul>
-            <li>Favorite emoji: 🤠</li>
-            <li>Favorite food: Spaghetti</li>
-            <li>Favorite keyboard switches: MX Brown</li>
-            <li>Favorite Disney movie: Aladdin</li>
-          </ul>
-        </p>
-      </motion.div>
-      
+    <div className='card-container'>
+      <div id='about' className="center no-point">
+        <motion.div
+          className="card front rb-glow"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          whileHover={{scale: 0.9}}>
+          <h2>About</h2>
+          <p className='sml-font'>
+            I'm a developer and artist who loves working on amusing and challenging projects.
+            <br></br>
+            I like learning new techniques and technologies that let me express myself in distinct ways.
+            <br></br>
+            I just graduated from UCI and right now I'm looking for new opportunities that push my limits and contribute to a meaningful product.
+            <br></br>
+            Here are some completely irrelevant facts about myself:
+            <ul>
+              <li>Favorite emoji: 🤠</li>
+              <li>Favorite food: Spaghetti</li>
+              <li>Favorite keyboard switches: MX Brown</li>
+              <li>Favorite Disney movie: Aladdin</li>
+            </ul>
+          </p>
+        </motion.div>
+        
+      </div>
     </div>
     <div className='screen-size'></div>
     
