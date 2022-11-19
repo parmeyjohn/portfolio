@@ -1,5 +1,25 @@
 import Spline from '@splinetool/react-spline'
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react"
+
+
+const artProjects = [
+  {
+    "id": 1,
+    "name": "concept 01",
+    "image": "",
+    "link" : ""
+  }
+]
+const codeProjects = [
+  {
+    "id": 1,
+    "name": "Bapple",
+    "image": "",
+    "link" : ""
+  }
+]
+
 
 
 const Bubble = ({title, text}) => {
@@ -29,7 +49,7 @@ const App = () => (
         <Spline scene="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode" />
       </div>
     <div id='title'>
-      <h1 className='text-gradient'>
+      <h1 className='rb-grad-text'>
         It's-a me... 
         <br></br>
         <span className='name'>John.</span>
@@ -43,7 +63,7 @@ const App = () => (
         className="card"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}>
-        <h2 className='card-header'>About</h2>
+        <h2 className='card-header gb-grad-text'>About</h2>
 
         <div className='card-content'>
         
@@ -139,28 +159,39 @@ const App = () => (
       </div>
     </div>
 
-    <div id='projects' className=''>
+    <div className='space'></div>
+
+    <div id='projects'>
+      <h2 className='card-header gb-grad-text center'>Recent Projects</h2>
+      <h3>Code</h3>
+
+
+
+
+
+      <h3>Art</h3>
+      
 
     </div>
     <div id='art' className=''>
 
     </div>
-    
-    <div id='contact-me' className='form-container'>
-      <h2 className='text-gradient card-header'>Contact Me</h2>
-      <div className='card-content'>
-        <h3>For any employment opportunities or general inquiries, feel free to contact me below:</h3>
-        
-          <div className='contact-form'>
-            <form action="https://formsubmit.co/johncuviello99@gmail.com" method="POST">
-              <input type="text" name="name" placeholder="Name" required />
-              <input type="email" name="email" placeholder="Email" required />
-              <input type="message" name="msg" placeholder="Message" className='msg-box' required />
-              <button type="submit">Send</button>
-            </form>
-          </div>
+    <div id='contact-me'>
+      <h2 className='rb-grad-text card-header center front'>Contact Me</h2>
+      <div className='card-col-container front'>
+        <div className='card-content front'>
+          <h3>For any employment opportunities or general inquiries, feel free to contact me below:</h3>
+          
+            <div className='contact-form front'>
+              <form action="https://formsubmit.co/johncuviello99@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="message" name="msg" placeholder="Message" className='msg-box' required />
+                <button type="submit">Send</button>
+              </form>
+            </div>
       </div>
-      
+    </div>
       
       
       
