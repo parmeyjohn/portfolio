@@ -67,7 +67,7 @@ const App = () => (
     </div>
     <div className='space'></div>
     
-    <h2 className='card-header'>Experience</h2>
+    <h2 className='card-header center'>Experience</h2>
     <div id='experience' className='card-col-container'>
       
       
@@ -76,17 +76,24 @@ const App = () => (
           className="tl-item"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}> 
-          <h3 className='font-sml'>B.S. in Computer Science</h3>
-          <h4>UCI</h4>
-          <p>Heyoooo</p>
+          <div className='tl-item-content'>
+            <h3 className='font-sml'>B.S. in Computer Science <span className='black'>at</span> UCI</h3>
+            <h4>2022</h4>
+            <br></br>
+            <p>
+              Relevant Coursework: <br /> Design and Analysis of Algorithms, Principles in System Design, Data Structure Implementation and Analysis, Data Management, Machine Learning and Data Mining
+            </p>
+          </div>
         </motion.div>
         <motion.div
           className="tl-item"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}> 
           <div className='tl-item-content'>
-            <h3>Software Engineer Intern</h3>
-            <h4>Knowde</h4>
+            <h3>Software Engineer Intern 
+              <span className='black'> at</span> <strong>Knowde</strong></h3>
+            <h4>2022</h4>
+            <br></br>
             <ul>
               <li>Developed application that ingests, parses, and extracts data from chemical PDF documents</li>
               <li>Automated the process of manually parsing and entering sensitive data into their database from 200+ documents weekly</li>
@@ -95,17 +102,39 @@ const App = () => (
             </ul>
           </div>
         </motion.div>
+        <motion.div
+          className="tl-item"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}> 
+          <div className='tl-item-content'>
+            
+            <h3>Team Member 
+              <span className='black'> at</span> <strong>Chipotle</strong></h3>
+            <h4>2021</h4>
+            <br></br>
+            <ul>
+              <li>Amplified throughput on the cash register and food line in a fast-paced team environment</li>
+              <li>Provided exemplary service to over 150 customers per shift</li>
+            </ul>
+          </div>
+        </motion.div>
+        <motion.div
+          className="tl-item"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}> 
+          <div className='tl-item-content'>
+            
+            <h3>Sales Associate 
+              <span className='black'> at</span> <strong>Vans</strong></h3>
+            <h4>2020</h4>
+            <br></br>
+            <ul>
+              <li>Worked the shoe floor, cash register, and apparel deck engaging with customers and assisting coworkers</li>
+              <li>Memorized dozens of shoe and apparel styles to improve ability to meet customers’ needs</li>
+            </ul>
+          </div>
+        </motion.div>
 
-        <div className='tl-item'>
-          <div className='tl-content'>
-            UCI
-          </div>
-        </div>
-        <div className='tl-item'>
-          <div className='tl-content'>
-            UCI
-          </div>
-        </div>
         <div className='tl-line'></div>
       </div>
     </div>
@@ -117,13 +146,28 @@ const App = () => (
 
     </div>
     
-    <div id='contact-me' className=''>
-      <h2>Looking for opportunies</h2>
-      <h3>For any employment opportunities or general inquiries, feel free to contact me below:</h3>
-      <div className=''></div>
+    <div id='contact-me' className='form-container'>
+      <h2 className='text-gradient card-header'>Contact Me</h2>
+      <div className='card-content'>
+        <h3>For any employment opportunities or general inquiries, feel free to contact me below:</h3>
+        
+          <div className='contact-form'>
+            <form action="https://formsubmit.co/johncuviello99@gmail.com" method="POST">
+              <input type="text" name="name" placeholder="Name" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <input type="message" name="msg" placeholder="Message" className='msg-box' required />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+      </div>
       
-      <form></form>
+      
+      
+      
       <h3>or contact me on my socials:</h3>
+      <div className='social-medias'>
+
+      </div>
     </div>
 
     
