@@ -57,13 +57,13 @@ const App = () => (
     </div>
     
     <div className='space'></div>
-      
+
+    <h2 className='card-header ry-grad-text center'>About</h2>
     <div id='about' className='card-container'>
       <motion.div
         className="card"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}>
-        <h2 className='card-header gb-grad-text'>About</h2>
 
         <div className='card-content'>
         
@@ -88,10 +88,11 @@ const App = () => (
     <div className='space'></div>
     
     <h2 className='card-header center'>Experience</h2>
+    
     <div id='experience' className='card-col-container'>
+      <div className='bg'></div>
       
-      
-      <div className="tl-container no-point tl-line">
+      <div className="tl-container no-point tl-line center">
         <motion.div
           className="tl-item"
           initial={{ opacity: 0 }}
