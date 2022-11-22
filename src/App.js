@@ -164,7 +164,36 @@ const App = () => (
 
     <div id='projects'>
       <h2 className='card-header gb-grad-text center'>Recent Projects</h2>
-      <h3>Code</h3>
+      
+      <div className='card-col-container'>
+        <h3 className='white'>Code</h3>
+        <motion.div
+         id='knowde' className='wide-card point-on'
+         whileHover={{scale: 0.9}}>
+          <div className='card-content'>
+            <h4 className='wide-card-header'>Knowde PDF Data Pipeline</h4>
+            <ul>
+              <li>Application that ingests, parses, and extracts data from chemical PDF documents</li>
+              <li>Stack: JavaScript (React), Python (Flask, pandas, numPy), MongoDB, HTML, and CSS</li>
+            </ul>
+          </div>
+        </motion.div>
+        <motion.div
+         id='bapple' className='wide-card point-on'
+         whileHover={{scale: 1.05}}>
+          <div className='card-content'>
+            <h4 className='wide-card-header'>Bapple: UCI Search Engine</h4>
+            <ul>
+              <li>Web crawler and search engine for tens of thousands of UCI web pages</li>
+              <li>Achieved accurate search results with a query time of fewer than 300 milliseconds</li>
+              <li>Stack: Python (Flask), JavaScript, HTML, and CSS</li>
+              <li>Link to demo and writeup available <a href='https://dennishc.github.io/bapple.html'>here</a></li>
+            </ul>
+          </div>
+        </motion.div>
+      </div>
+      
+      
 
 
 

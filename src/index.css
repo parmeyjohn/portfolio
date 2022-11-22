@@ -315,14 +315,23 @@ button {
   transform-style: preserve-3d;
   pointer-events: none;
 }
-
-.parallax-behind {
-  transform: translateZ(-10px) scale(2);
-
+.wide-card-header {
+  color: black;
+  font-size: var(--fs-xs);
+  padding: 5%;
 }
-
-.parallax-front {
-  transform: translateZ(-5) scale(1.5);
+.wide-card {
+  background-color: var(--off-white);
+  border-radius: 20px;
+  padding: 1.5%;
+  min-height: 250px;
+  height: auto;
+  width: 90%;
+  max-width: 700px;
+  margin: 5rem 0 0 0;
+  align-self: center;
+  z-index: var(--lvl-front);
+  background-image: 
 }
 
 form {
@@ -366,4 +375,16 @@ form {
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 10px;
+}
+
+.white {
+  color: white;
+}
+
+.point-on {
+  pointer-events: all;
+}
+
+.wide-card::hover {
+  color: red;
 }
