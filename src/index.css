@@ -137,9 +137,12 @@ h4 {
 
 .card-content {
   font-size: var(--fs-sml); 
-  padding-left: 10px; 
+  padding-left: 10px;
 }
 
+.padded {
+  padding: 1rem;
+}
 .card-content>li {
   margin-left: 30px;
 }
@@ -275,6 +278,7 @@ h4 {
   align-items: center;
   z-index: var(--lvl-front);
   width: 100%;
+  pointer-events: all;
 }
 
 input {
@@ -293,14 +297,18 @@ input {
 }
 
 button {
-  color: white;
-  background-image: linear-gradient( yellow, rgb(47, 255, 0));
+  color: black;
+  background-image: linear-gradient(red 70%, blue);
   padding: 5px;
   border-radius: 20px;
-  width: 50vw;
+  width: 100%;
   height: auto;
   pointer-events: all;
 
+}
+
+button::hover {
+  background-color: green;
 }
 
 .card-col-container {
@@ -387,4 +395,33 @@ form {
 
 .wide-card::hover {
   color: red;
+}
+
+
+@supports (scrollbar-color: red blue) {
+  * {
+    scollbar-color: red blue;
+  }
+}
+::-webkit-scrollbar {
+  border-radius: 25px;
+  background-color: blue;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  box-shadow: 0px 0px 0px 100000vh black;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-image: linear-gradient(rgb(255, 255, 0), red, blue, rgb(0, 255, 0));
+  margin: 10px 0px;
+  border-radius: 20px;
+}
+
+.flex-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

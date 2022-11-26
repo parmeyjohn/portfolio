@@ -1,6 +1,7 @@
 import Spline from '@splinetool/react-spline'
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
+import { FaLinkedin, FaGithub, FaInstagram} from "react-icons/fa"
 
 
 const artProjects = [
@@ -199,39 +200,69 @@ const App = () => (
 
 
 
-      <h3>Art</h3>
+      <div className='card-col-container'>
+        <h3 className='white'>Art</h3>
+        <motion.div
+         id='boxer' className='wide-card point-on'
+         whileHover={{scale: 0.9}}>
+          <div className='card-content'>
+            <h4 className='wide-card-header'>Knowde PDF Data Pipeline</h4>
+            <ul>
+              <li>Application that ingests, parses, and extracts data from chemical PDF documents</li>
+              <li>Stack: JavaScript (React), Python (Flask, pandas, numPy), MongoDB, HTML, and CSS</li>
+            </ul>
+          </div>
+          
+        </motion.div>
+      </div>
       
 
     </div>
-    <div id='art' className=''>
-
-    </div>
+    
+    
+    <div className='space'></div>
+    
+    
     <div id='contact-me'>
+
       <h2 className='rb-grad-text card-header center front'>Contact Me</h2>
+      
       <div className='card-col-container front'>
+        <div className='bg'></div>
         <div className='card-content front'>
-          <h3>For any employment opportunities or general inquiries, feel free to contact me below:</h3>
+          <h3 className='white padded'>For any opportunities or general inquiries, feel free to contact me below:</h3>
           
             <div className='contact-form front'>
               <form action="https://formsubmit.co/johncuviello99@gmail.com" method="POST">
                 <input type="text" name="name" placeholder="Name" required />
                 <input type="email" name="email" placeholder="Email" required />
                 <input type="message" name="msg" placeholder="Message" className='msg-box' required />
-                <button type="submit">Send</button>
+                <button className='point-on' type="submit">Send</button>
               </form>
             </div>
+          <h3 className='white padded'>or check out my socials:</h3>
+          
+          
+          <div className='flex-icons padded'>
+            <a href='https://www.linkedin.com/in/johncuv/' className='point-on'>
+              <FaLinkedin href='google.com' color='white' size='4rem' />
+            </a>
+            <a href='instagram.com' className='point-on'>
+              <FaInstagram color='white' size='4rem' />
+            </a>
+            <a href='https://github.com/parmeyjohn' className='point-on'>
+              <FaGithub color='white' size='4rem' />
+            </a>
+          </div>
       </div>
     </div>
       
       
       
-      <h3>or contact me on my socials:</h3>
-      <div className='social-medias'>
-
-      </div>
+      
     </div>
 
-    
+    <img src='images\boxer.png' alt=''></img>
   <p>
     This website is inspired by <a href='https://www.youtube.com/watch?v=2ccwFGUL1SU'>the title screen in Mario 64</a>
     and the old promo Nintendo renders for the game 
