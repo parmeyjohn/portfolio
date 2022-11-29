@@ -44,7 +44,9 @@ const Project = ({title, image, alt}) => {
 }
 //    
 
-const App = () => (
+const App = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
   <div>
     <div className='face'>
         <Spline scene="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode" />
@@ -203,14 +205,20 @@ const App = () => (
       <div className='card-col-container'>
         <h3 className='white'>Art</h3>
         <motion.div
-         id='boxer' className='wide-card point-on'
-         whileHover={{scale: 0.9}}>
+          id='boxer' className='wide-card point-on'
+          whileHover={{scale: 1.1}}>
           <div className='card-content'>
-            <h4 className='wide-card-header'>Knowde PDF Data Pipeline</h4>
-            <ul>
-              <li>Application that ingests, parses, and extracts data from chemical PDF documents</li>
-              <li>Stack: JavaScript (React), Python (Flask, pandas, numPy), MongoDB, HTML, and CSS</li>
-            </ul>
+            <h4 className='wide-card-header white'>Boxer</h4>
+
+          </div>
+          
+        </motion.div>
+        
+        <motion.div
+          id='portrait_1' className='wide-card point-on'
+          whileHover={{scale: 1.1}}>
+          <div className='card-content'>
+            <h4 className='wide-card-header white'>Speed Portrait 01</h4>
           </div>
           
         </motion.div>
@@ -253,6 +261,9 @@ const App = () => (
             <a href='https://github.com/parmeyjohn' className='point-on'>
               <FaGithub color='white' size='4rem' />
             </a>
+            <a href='https://github.com/parmeyjohn' className='point-on'>
+              <FaGithub color='white' size='4rem' />
+            </a>
           </div>
       </div>
     </div>
@@ -261,8 +272,6 @@ const App = () => (
       
       
     </div>
-
-    <img src='images\boxer.png' alt=''></img>
   <p>
     This website is inspired by <a href='https://www.youtube.com/watch?v=2ccwFGUL1SU'>the title screen in Mario 64</a>
     and the old promo Nintendo renders for the game 
@@ -270,5 +279,6 @@ const App = () => (
   </div>
 
 )
+}
 
 export default App;

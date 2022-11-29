@@ -230,6 +230,10 @@ h4 {
 }
 
 
+.big-font {
+  font-size: var(--fs-xl);
+}
+
 #about {
   pointer-events: none;
 }
@@ -291,14 +295,16 @@ input {
   border-radius: 5px;
   width: 50vh;
   border: none;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   pointer-events: all;
 }
 
 button {
-  color: black;
-  background-image: linear-gradient(red 70%, blue);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;;
+  color: white;
+  font-weight: bold;
+  background-image: linear-gradient(red, blue);
   padding: 5px;
   border-radius: 20px;
   width: 100%;
@@ -322,6 +328,7 @@ button::hover {
   width: 100%;
   transform-style: preserve-3d;
   pointer-events: none;
+
 }
 .wide-card-header {
   color: black;
@@ -336,7 +343,8 @@ button::hover {
   height: auto;
   width: 90%;
   max-width: 700px;
-  margin: 5rem 0 0 0;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
   align-self: center;
   z-index: var(--lvl-front);
   background-image: 
@@ -398,14 +406,8 @@ form {
 }
 
 
-@supports (scrollbar-color: red blue) {
-  * {
-    scollbar-color: red blue;
-  }
-}
 ::-webkit-scrollbar {
   border-radius: 25px;
-  background-color: blue;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -424,4 +426,35 @@ form {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+#boxer {
+  background: url('../public/images/boxer.png') no-repeat top scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#boxer-big {
+  background: url('../public/images/boxer.png') no-repeat top scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#portrait_1 {
+  background: url('../public/images/rough_portrait_01.png') no-repeat center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.backdrop {
+  width: 75vw;
+  height: 75vh;
+  color: black;
+  display: block;
 }
