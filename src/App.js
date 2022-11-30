@@ -267,10 +267,6 @@ const App = () => {
           </div>
       </div>
     </div>
-      
-      
-      
-      
     </div>
   <p>
     This website is inspired by <a href='https://www.youtube.com/watch?v=2ccwFGUL1SU'>the title screen in Mario 64</a>

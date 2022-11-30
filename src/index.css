@@ -301,20 +301,17 @@ input {
 }
 
 button {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;;
+  font-family: 'Spiritendo', sans-serif;;
   color: white;
   font-weight: bold;
-  background-image: linear-gradient(red, blue);
+  background-image: linear-gradient(to right, red, blue);
   padding: 5px;
   border-radius: 20px;
   width: 100%;
   height: auto;
   pointer-events: all;
+  margin: 10px;
 
-}
-
-button::hover {
-  background-color: green;
 }
 
 .card-col-container {
@@ -417,7 +414,7 @@ form {
 }
 
 ::-webkit-scrollbar-track {
-  background-image: linear-gradient(rgb(255, 255, 0), red, blue, rgb(0, 255, 0));
+  background-image: linear-gradient(blue, red, rgb(255, 255, 0), rgb(0, 255, 0), blue, red);
   margin: 10px 0px;
   border-radius: 20px;
 }
