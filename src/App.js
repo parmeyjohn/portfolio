@@ -71,20 +71,16 @@ const App = () => {
         <div className='card-content'>
         
           <p className='sml-font'>
-            I'm a developer and artist who loves working on amusing and challenging projects.
+            I'm a developer and artist based in California.
             <br></br>
-            I like learning new techniques and technologies that let me express myself in distinct ways.
+            I recently graduated from UCI and I'm looking for new opportunities.
             <br></br>
-            I just graduated from UCI and right now I'm looking for new opportunities that push my limits and contribute to a meaningful product.
+            My main languages right now are Python and JavaScript but I've worked with C, C++, and Java in the past and I'm always willing to learn new tech for a project. 
             <br></br>
-            Here are some completely irrelevant facts about myself:
-            <ul>
-              <li>Favorite emoji: 🤠</li>
-              <li>Favorite food: Spaghetti</li>
-              <li>Favorite keyboard switches: MX Brown</li>
-              <li>Favorite Disney movie: Aladdin</li>
-            </ul>
-          </p>
+
+            Oh and for reference this site was inspired by <a href='https://www.youtube.com/watch?v=2ccwFGUL1SU'>the title screen in Mario 64</a> and old Nintendo promo art.
+            
+          </p>n
         </div>
       </motion.div>
     </div>
@@ -165,6 +161,8 @@ const App = () => {
 
     <div className='space'></div>
 
+
+
     <div id='projects'>
       <h2 className='card-header gb-grad-text center'>Recent Projects</h2>
       
@@ -233,14 +231,14 @@ const App = () => {
     
     <div id='contact-me'>
 
-      <h2 className='rb-grad-text card-header center front'>Contact Me</h2>
+      <h2 className='rb-grad-text card-header center '>Contact Me</h2>
       
-      <div className='card-col-container front'>
+      <div className='card-col-container'>
         <div className='bg'></div>
-        <div className='card-content front'>
+        <div className='card-content'>
           <h3 className='white padded'>For any opportunities or general inquiries, feel free to contact me below:</h3>
           
-            <div className='contact-form front'>
+            <div className='contact-form'>
               <form action="https://formsubmit.co/johncuviello99@gmail.com" method="POST">
                 <input type="text" name="name" placeholder="Name" required />
                 <input type="email" name="email" placeholder="Email" required />
@@ -268,10 +266,6 @@ const App = () => {
       </div>
     </div>
     </div>
-  <p>
-    This website is inspired by <a href='https://www.youtube.com/watch?v=2ccwFGUL1SU'>the title screen in Mario 64</a>
-    and the old promo Nintendo renders for the game 
-  </p>
   </div>
 
 )
