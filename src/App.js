@@ -12,40 +12,75 @@ const artProjects = [
     "link" : ""
   }
 ]
-const codeProjects = [
-  {
-    "id": 1,
-    "name": "Bapple",
-    "image": "",
-    "link" : ""
-  }
-]
 
 
 
-const Bubble = ({title, text}) => {
-  
+const ArtProject = ({title, id}) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <>
-      <h3>{title}</h3>
-    </>
+    <motion.div onClick={()=> setIsOpen(!isOpen)}
+      id={id} 
+      className='wide-card point-on'
+      layout
+      whileHover={{scale: 1.05}}>
+        <motion.div layout='position' className='card-content'>
+          <h4 className='wide-card-header white'>{title}</h4>
+        </motion.div>
+        {isOpen && (
+          <motion.div layout className="expand">
+            <p>Hey this stuff is happening</p>
+          </motion.div>
+        )
+        }
+    </motion.div>
+  )
+}    
+
+
+const CodeProject = ({project}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <motion.div onClick={()=> setIsOpen(!isOpen)}
+      id={project.id} 
+      className='wide-card point-on'
+      layout
+      whileHover={{scale: 1.05}}>
+        <motion.div layout='position' className='card-content'>
+          <h4 layout='position' className='wide-card-header'>{project.name}</h4>
+          {isOpen && (
+            <motion.div layout className="expand">
+              <ul>
+                {project.bullets.map((bullet, i) => <li key={i}>{bullet}</li>)}
+              </ul>
+            </motion.div>
+          )
+          }
+        </motion.div>
+        
+    </motion.div>
   )
 }
 
-//TODO: replace img tag with frame
-const Project = ({title, image, alt}) => {
-  
-  return (
-    <>
-      <h3>{title}</h3>
-      <img src={image} alt={alt}></img>
-    </>
-  )
-}
-//    
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const codingProjects = {
+    'bapple': {
+                "id": 'bapple',
+                "name": "Bapple: UCI Search Engine",
+                "image": "",
+                "link" : "https://dennishc.github.io/bapple.html",
+                'bullets' : [
+                          'Web crawler and search engine for tens of thousands of UCI web pages',
+                          'Achieved accurate search results with a query time of fewer than 300 milliseconds',
+                          'Stack: Python (Flask), JavaScript, HTML, and CSS'
+                        ]
+    },
+    'knowde': {
+      
+    }
+  };
+
+
   return (
   <div>
     <div className='face'>
@@ -89,7 +124,9 @@ const App = () => {
     <h2 className='card-header center'>Experience</h2>
     
     <div id='experience' className='card-col-container'>
-      <div className='bg'></div>
+      <div className='bg'>
+
+      </div>
       
       <div className="tl-container no-point tl-line center">
         <motion.div
@@ -164,10 +201,13 @@ const App = () => {
 
 
     <div id='projects'>
-      <h2 className='card-header gb-grad-text center'>Recent Projects</h2>
       
+      <h2 className='card-header gb-grad-text center'>Recent Projects</h2>
       <div className='card-col-container'>
         <h3 className='white'>Code</h3>
+        <CodeProject project={codingProjects['bapple']}/>
+
+        
         <motion.div
          id='knowde' className='wide-card point-on'
          whileHover={{scale: 0.9}}>
@@ -179,19 +219,7 @@ const App = () => {
             </ul>
           </div>
         </motion.div>
-        <motion.div
-         id='bapple' className='wide-card point-on'
-         whileHover={{scale: 1.05}}>
-          <div className='card-content'>
-            <h4 className='wide-card-header'>Bapple: UCI Search Engine</h4>
-            <ul>
-              <li>Web crawler and search engine for tens of thousands of UCI web pages</li>
-              <li>Achieved accurate search results with a query time of fewer than 300 milliseconds</li>
-              <li>Stack: Python (Flask), JavaScript, HTML, and CSS</li>
-              <li>Link to demo and writeup available <a href='https://dennishc.github.io/bapple.html'>here</a></li>
-            </ul>
-          </div>
-        </motion.div>
+        
       </div>
       
       
@@ -199,27 +227,11 @@ const App = () => {
 
 
 
-
+      
       <div className='card-col-container'>
         <h3 className='white'>Art</h3>
-        <motion.div
-          id='boxer' className='wide-card point-on'
-          whileHover={{scale: 1.1}}>
-          <div className='card-content'>
-            <h4 className='wide-card-header white'>Boxer</h4>
-
-          </div>
-          
-        </motion.div>
-        
-        <motion.div
-          id='portrait_1' className='wide-card point-on'
-          whileHover={{scale: 1.1}}>
-          <div className='card-content'>
-            <h4 className='wide-card-header white'>Speed Portrait 01</h4>
-          </div>
-          
-        </motion.div>
+        <ArtProject id='boxer' title='portrait uno' />
+        <ArtProject id='portrait_1' title='portrait uno' />
       </div>
       
 
@@ -234,34 +246,35 @@ const App = () => {
       <h2 className='rb-grad-text card-header center '>Contact Me</h2>
       
       <div className='card-col-container'>
-        <div className='bg'></div>
-        <div className='card-content'>
-          <h3 className='white padded'>For any opportunities or general inquiries, feel free to contact me below:</h3>
-          
-            <div className='contact-form'>
-              <form action="https://formsubmit.co/johncuviello99@gmail.com" method="POST">
-                <input type="text" name="name" placeholder="Name" required />
-                <input type="email" name="email" placeholder="Email" required />
-                <input type="message" name="msg" placeholder="Message" className='msg-box' required />
-                <button className='point-on' type="submit">Send</button>
-              </form>
+        <div className='bg'>
+          <div className='card-content'>
+            <h3 className='white padded'>For any opportunities or general inquiries, feel free to contact me below:</h3>
+            
+              <div className='contact-form'>
+                <form action="https://formsubmit.co/johncuviello99@gmail.com" method="POST">
+                  <input type="text" name="name" placeholder="Name" required />
+                  <input type="email" name="email" placeholder="Email" required />
+                  <input type="message" name="msg" placeholder="Message" className='msg-box' required />
+                  <button className='point-on' type="submit">Send</button>
+                </form>
+              </div>
+            <h3 className='white padded'>or check out my socials:</h3>
+            
+            
+            <div className='flex-icons padded'>
+              <a href='https://www.linkedin.com/in/johncuv/' className='point-on'>
+                <FaLinkedin href='google.com' color='white' size='4rem' />
+              </a>
+              <a href='instagram.com' className='point-on'>
+                <FaInstagram color='white' size='4rem' />
+              </a>
+              <a href='https://github.com/parmeyjohn' className='point-on'>
+                <FaGithub color='white' size='4rem' />
+              </a>
+              <a href='https://github.com/parmeyjohn' className='point-on'>
+                <FaGithub color='white' size='4rem' />
+              </a>
             </div>
-          <h3 className='white padded'>or check out my socials:</h3>
-          
-          
-          <div className='flex-icons padded'>
-            <a href='https://www.linkedin.com/in/johncuv/' className='point-on'>
-              <FaLinkedin href='google.com' color='white' size='4rem' />
-            </a>
-            <a href='instagram.com' className='point-on'>
-              <FaInstagram color='white' size='4rem' />
-            </a>
-            <a href='https://github.com/parmeyjohn' className='point-on'>
-              <FaGithub color='white' size='4rem' />
-            </a>
-            <a href='https://github.com/parmeyjohn' className='point-on'>
-              <FaGithub color='white' size='4rem' />
-            </a>
           </div>
       </div>
     </div>

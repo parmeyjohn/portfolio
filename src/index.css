@@ -372,7 +372,24 @@ form {
 .bg {
   width: 90%;
   max-width: 1400px;
-  height: 100%;
+  height: inherit;
+  position: absolute;
+  background-color: var(--dark-green);
+  border-radius: 20px;
+  z-index: var(--lvl-bg);
+
+  background: rgba(19, 69, 51, 0.42);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(19, 69, 51, 0.3);
+  pointer-events: none;
+}
+
+.contact-bg {
+  width: 90%;
+  max-width: 1400px;
+  height: 60%;
   position: absolute;
   background-color: var(--dark-green);
   border-radius: 20px;
@@ -436,14 +453,6 @@ form {
   background-size: cover;
 }
 
-#boxer-big {
-  background: url('../public/images/boxer.png') no-repeat top scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 #portrait_1 {
   background: url('../public/images/rough_portrait_01.png') no-repeat center scroll;
   -webkit-background-size: cover;
@@ -460,5 +469,14 @@ form {
 }
 
 #contact-me {
+  height: auto;
+}
+
+.expand {
+  height: 50vh;
+  padding: 1rem;
+}
+
+#projects {
   height: auto;
 }
