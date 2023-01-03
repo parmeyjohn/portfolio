@@ -372,12 +372,11 @@ form {
 .bg {
   width: 90%;
   max-width: 1400px;
-  height: inherit;
+  height: 100%;
   position: absolute;
   background-color: var(--dark-green);
   border-radius: 20px;
   z-index: var(--lvl-bg);
-
   background: rgba(19, 69, 51, 0.42);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -389,7 +388,7 @@ form {
 .contact-bg {
   width: 90%;
   max-width: 1400px;
-  height: 60%;
+  height: auto;
   position: absolute;
   background-color: var(--dark-green);
   border-radius: 20px;
@@ -466,10 +465,6 @@ form {
   height: 75vh;
   color: black;
   display: block;
-}
-
-#contact-me {
-  height: auto;
 }
 
 .expand {

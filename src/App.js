@@ -1,68 +1,57 @@
 import Spline from '@splinetool/react-spline'
-import { motion, AnimatePresence } from "framer-motion"
-import { useState } from "react"
+import { motion } from "framer-motion"
 import { FaLinkedin, FaGithub, FaInstagram} from "react-icons/fa"
 
 
-const artProjects = [
-  {
-    "id": 1,
-    "name": "concept 01",
-    "image": "",
-    "link" : ""
-  }
-]
-
-
-
-const ArtProject = ({title, id}) => {
-  const [isOpen, setIsOpen] = useState(false);
+const ArtProject = ({project}) => {
   return (
-    <motion.div onClick={()=> setIsOpen(!isOpen)}
-      id={id} 
+    <motion.div
+      id={project.id} 
       className='wide-card point-on'
       layout
       whileHover={{scale: 1.05}}>
         <motion.div layout='position' className='card-content'>
-          <h4 className='wide-card-header white'>{title}</h4>
+          <h4 className='wide-card-header white'>{project.name}</h4>
         </motion.div>
-        {isOpen && (
-          <motion.div layout className="expand">
-            <p>Hey this stuff is happening</p>
-          </motion.div>
-        )
-        }
     </motion.div>
   )
 }    
 
 
 const CodeProject = ({project}) => {
-  const [isOpen, setIsOpen] = useState(false);
   return (
-    <motion.div onClick={()=> setIsOpen(!isOpen)}
+    <motion.div
+      onClick={() => window.open(project.link)}
       id={project.id} 
       className='wide-card point-on'
       layout
       whileHover={{scale: 1.05}}>
         <motion.div layout='position' className='card-content'>
           <h4 layout='position' className='wide-card-header'>{project.name}</h4>
-          {isOpen && (
-            <motion.div layout className="expand">
-              <ul>
-                {project.bullets.map((bullet, i) => <li key={i}>{bullet}</li>)}
-              </ul>
-            </motion.div>
-          )
-          }
-        </motion.div>
-        
+          <ul>
+            {project.bullets.map((bullet, i) => <li key={i}>{bullet}</li>)}
+          </ul>
+        </motion.div>     
     </motion.div>
   )
 }
 
 
 const App = () => {
+  
+  const artProjects = {
+    'boxer' : {
+              "id": 'boxer',
+              "name": "boxer",
+              "link" : "#"
+    },
+    'portrait_1' : {
+              "id": 'portrait_1',
+              "name": "Blue Portrait",
+              "link" : "#"
+}
+  };
+
   const codingProjects = {
     'bapple': {
                 "id": 'bapple',
@@ -76,9 +65,18 @@ const App = () => {
                         ]
     },
     'knowde': {
+                "id": 'knowde',
+                "name": "Knowde Fullstack PDF Data Pipeline",
+                "image": "",
+                "link" : "#",
+                'bullets' : [
+                          'Application that ingests, parses, and extracts data from chemical PDF documents',
+                          'add something here',
+                          'Stack: JavaScript (React), Python (Flask, pandas, numPy), MongoDB, HTML, and CSS'
+                        ]
+          } 
       
     }
-  };
 
 
   return (
@@ -105,8 +103,8 @@ const App = () => {
 
         <div className='card-content'>
         
-          <p className='sml-font'>
-            I'm a developer and artist based in California.
+          <p className='med-font'>
+            I'm a developer and artist based in California.sun
             <br></br>
             I recently graduated from UCI and I'm looking for new opportunities.
             <br></br>
@@ -124,9 +122,7 @@ const App = () => {
     <h2 className='card-header center'>Experience</h2>
     
     <div id='experience' className='card-col-container'>
-      <div className='bg'>
-
-      </div>
+      <div className='bg'></div>
       
       <div className="tl-container no-point tl-line center">
         <motion.div
@@ -204,34 +200,15 @@ const App = () => {
       
       <h2 className='card-header gb-grad-text center'>Recent Projects</h2>
       <div className='card-col-container'>
-        <h3 className='white'>Code</h3>
-        <CodeProject project={codingProjects['bapple']}/>
-
-        
-        <motion.div
-         id='knowde' className='wide-card point-on'
-         whileHover={{scale: 0.9}}>
-          <div className='card-content'>
-            <h4 className='wide-card-header'>Knowde PDF Data Pipeline</h4>
-            <ul>
-              <li>Application that ingests, parses, and extracts data from chemical PDF documents</li>
-              <li>Stack: JavaScript (React), Python (Flask, pandas, numPy), MongoDB, HTML, and CSS</li>
-            </ul>
-          </div>
-        </motion.div>
-        
+        <h3 className='white'>code</h3>
+        <CodeProject project={codingProjects['bapple']} />
+        <CodeProject project={codingProjects['knowde']} />
       </div>
-      
-      
-
-
-
-
-      
       <div className='card-col-container'>
-        <h3 className='white'>Art</h3>
-        <ArtProject id='boxer' title='portrait uno' />
-        <ArtProject id='portrait_1' title='portrait uno' />
+        <h3 className='white'>art</h3>
+        <ArtProject project={artProjects['boxer']} />
+        <ArtProject project={artProjects['portrait_1']} />
+        
       </div>
       
 
@@ -240,13 +217,13 @@ const App = () => {
     
     <div className='space'></div>
     
-    
+    <h2 className='rb-grad-text card-header center '>Contact Me</h2>
     <div id='contact-me'>
 
-      <h2 className='rb-grad-text card-header center '>Contact Me</h2>
+      
       
       <div className='card-col-container'>
-        <div className='bg'>
+        <div className='contact-bg'>
           <div className='card-content'>
             <h3 className='white padded'>For any opportunities or general inquiries, feel free to contact me below:</h3>
             
@@ -279,7 +256,7 @@ const App = () => {
       </div>
     </div>
     </div>
-  </div>
+    </div>
 
 )
 }
