@@ -1,89 +1,17 @@
 import Spline from '@splinetool/react-spline'
 import { motion } from "framer-motion"
 import { FaLinkedin, FaGithub, FaInstagram} from "react-icons/fa"
-
-
-const ArtProject = ({project}) => {
-  return (
-    <motion.div
-      id={project.id} 
-      className='wide-card point-on'
-      layout
-      whileHover={{scale: 1.05}}>
-        <motion.div layout='position' className='card-content'>
-          <h4 className='wide-card-header white'>{project.name}</h4>
-        </motion.div>
-    </motion.div>
-  )
-}    
-
-
-const CodeProject = ({project}) => {
-  return (
-    <motion.div
-      onClick={() => window.open(project.link)}
-      id={project.id} 
-      className='wide-card point-on'
-      layout
-      whileHover={{scale: 1.05}}>
-        <motion.div layout='position' className='card-content'>
-          <h4 layout='position' className='wide-card-header'>{project.name}</h4>
-          <ul>
-            {project.bullets.map((bullet, i) => <li key={i}>{bullet}</li>)}
-          </ul>
-        </motion.div>     
-    </motion.div>
-  )
-}
-
-
+import { ArtProject, CodeProject} from "./components/Project"
+import codingProjects from "./data/codeProjects.json"
+import artProjects from "./data/artProjects.json"
+ 
 const App = () => {
-  
-  const artProjects = {
-    'boxer' : {
-              "id": 'boxer',
-              "name": "boxer",
-              "link" : "#"
-    },
-    'portrait_1' : {
-              "id": 'portrait_1',
-              "name": "Blue Portrait",
-              "link" : "#"
-}
-  };
-
-  const codingProjects = {
-    'bapple': {
-                "id": 'bapple',
-                "name": "Bapple: UCI Search Engine",
-                "image": "",
-                "link" : "https://dennishc.github.io/bapple.html",
-                'bullets' : [
-                          'Web crawler and search engine for tens of thousands of UCI web pages',
-                          'Achieved accurate search results with a query time of fewer than 300 milliseconds',
-                          'Stack: Python (Flask), JavaScript, HTML, and CSS'
-                        ]
-    },
-    'knowde': {
-                "id": 'knowde',
-                "name": "Knowde Fullstack PDF Data Pipeline",
-                "image": "",
-                "link" : "#",
-                'bullets' : [
-                          'Application that ingests, parses, and extracts data from chemical PDF documents',
-                          'add something here',
-                          'Stack: JavaScript (React), Python (Flask, pandas, numPy), MongoDB, HTML, and CSS'
-                        ]
-          } 
-      
-    }
-
-
   return (
   <div>
     <div className='face'>
         <Spline scene="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode" />
       </div>
+    
     <div id='title'>
       <h1 className='rb-grad-text'>
         It's-a me... 
@@ -104,15 +32,13 @@ const App = () => {
         <div className='card-content'>
         
           <p className='med-font'>
-            I'm a developer and artist based in California.sun
+            I'm a developer and artist based in California.
             <br></br>
             I recently graduated from UCI and I'm looking for new opportunities.
             <br></br>
             My main languages right now are Python and JavaScript but I've worked with C, C++, and Java in the past and I'm always willing to learn new tech for a project. 
             <br></br>
 
-            Oh and for reference this site was inspired by <a href='https://www.youtube.com/watch?v=2ccwFGUL1SU'>the title screen in Mario 64</a> and old Nintendo promo art.
-            
           </p>n
         </div>
       </motion.div>
@@ -133,9 +59,14 @@ const App = () => {
             <h3 className='font-sml'>B.S. in Computer Science <span className='black'>at</span> UCI</h3>
             <h4>2022</h4>
             <br></br>
-            <p>
-              Relevant Coursework: <br /> Design and Analysis of Algorithms, Principles in System Design, Data Structure Implementation and Analysis, Data Management, Machine Learning and Data Mining
-            </p>
+            <p><strong>Relevant Coursework:</strong> </p>
+            <ul>
+              <li>Data Structure Implementation and Analysis</li>
+              <li>Design and Analysis of Algorithms</li>
+              <li>Principles in System Design</li>
+              <li>Data Management</li>
+              <li>Machine Learning and Data Mining</li>
+            </ul>
           </div>
         </motion.div>
         <motion.div
@@ -150,7 +81,7 @@ const App = () => {
             <ul>
               <li>Developed application that ingests, parses, and extracts data from chemical PDF documents</li>
               <li>Automated the process of manually parsing and entering sensitive data into their database from 200+ documents weekly</li>
-              <li>Expedited document parsing from 6 minutes manually to less than 1 minute per doc</li>
+              <li>Expedited document parsing from 6+ minutes manually to less than 1 minute per doc</li>
               <li>Attained steady and accurate progress using agile development with Jira, and regression testing</li>
             </ul>
           </div>
@@ -187,14 +118,11 @@ const App = () => {
             </ul>
           </div>
         </motion.div>
-
         <div className='tl-line'></div>
       </div>
     </div>
 
     <div className='space'></div>
-
-
 
     <div id='projects'>
       
@@ -203,6 +131,7 @@ const App = () => {
         <h3 className='white'>code</h3>
         <CodeProject project={codingProjects['bapple']} />
         <CodeProject project={codingProjects['knowde']} />
+        <CodeProject project={codingProjects['portfolio64']} />
       </div>
       <div className='card-col-container'>
         <h3 className='white'>art</h3>
@@ -210,8 +139,6 @@ const App = () => {
         <ArtProject project={artProjects['portrait_1']} />
         
       </div>
-      
-
     </div>
     
     

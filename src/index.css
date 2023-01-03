@@ -114,7 +114,7 @@ h4 {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   text-align:left;
   min-height: 800px;
 }
@@ -206,7 +206,7 @@ h4 {
 }
 
 .tl-item:nth-child(odd) {
-  justify-content: start;
+  justify-content: flex-start;
   align-self: flex-start;
   margin-left: 17%;
 }
