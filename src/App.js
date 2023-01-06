@@ -167,7 +167,7 @@ const App = () => {
             
             <div className='flex-icons padded'>
               <a href='https://www.linkedin.com/in/johncuv/' className='point-on'>
-                <FaLinkedin href='google.com' color='white' size='4rem' />
+                <FaLinkedin color='white' size='4rem' />
               </a>
               <a href='instagram.com' className='point-on'>
                 <FaInstagram color='white' size='4rem' />
