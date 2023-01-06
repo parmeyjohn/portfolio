@@ -91,18 +91,6 @@ h4 {
   z-index: var(--lvl-base);
 }
 
-.screen-size {
-  height: 100vh;
-  width: auto;
-  position: relative;
-}
-
-.red-glow:hover {
-  outline: none;
-  box-shadow: linear-gradient(red, blue);
-}
-
-
 /* fix the title size on cards*/
 .card {
   background-color: white;
@@ -126,8 +114,6 @@ h4 {
   width: 100%;
 }
 
-
-
 .card-header {
   font-size: var(--fs-med);
   /*add linear gradient as color for this*/
@@ -140,22 +126,20 @@ h4 {
   padding-left: 10px;
 }
 
-.padded {
-  padding: 1rem;
-}
 .card-content>li {
   margin-left: 30px;
 }
+
+.padded {
+  padding: 1rem;
+}
+
+
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.back {
-
-}
-
 
 .med-font {
   font-size: var(--fs-med);
@@ -194,7 +178,6 @@ h4 {
 }
 
 .tl-item-content {
-  
   margin-left: 5%;
 }
 
@@ -280,10 +263,12 @@ h4 {
 .contact-form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: auto;
   pointer-events: all;
+  z-index: var(--lvl-front);
 }
 
 input {
@@ -369,10 +354,11 @@ form {
   z-index: var(--lvl-front);
 }
 
-.bg {
+#experience::before {
+  content: "";
   width: 90%;
   max-width: 1400px;
-  height: 100%;
+  height: 130%;
   position: absolute;
   background-color: var(--dark-green);
   border-radius: 20px;
@@ -384,16 +370,18 @@ form {
   border: 1px solid rgba(19, 69, 51, 0.3);
   pointer-events: none;
 }
-
-.contact-bg {
+#contact-me {
+  z-index: var(--lvl-front);
+}
+#contact-me::after {
+  content: "";
   width: 90%;
   max-width: 1400px;
-  height: auto;
+  height: 80%;
   position: absolute;
   background-color: var(--dark-green);
   border-radius: 20px;
-  z-index: var(--lvl-bg);
-
+  z-index: var(--lvl-base);
   background: rgba(19, 69, 51, 0.42);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);

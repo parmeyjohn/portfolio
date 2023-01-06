@@ -47,9 +47,7 @@ const App = () => {
     
     <h2 className='card-header center'>Experience</h2>
     
-    <div id='experience' className='card-col-container'>
-      <div className='bg'></div>
-      
+    <div id='experience' className='card-col-container'>      
       <div className="tl-container no-point tl-line center">
         <motion.div
           className="tl-item"
@@ -124,34 +122,25 @@ const App = () => {
 
     <div className='space'></div>
 
-    <div id='projects'>
-      
-      <h2 className='card-header gb-grad-text center'>Recent Projects</h2>
-      <div className='card-col-container'>
+    <h2 className='card-header gb-grad-text center'>Recent Projects</h2>
+    
+    <div id='projects' className='card-col-container'>
         <h3 className='white'>code</h3>
         <CodeProject project={codingProjects['bapple']} />
         <CodeProject project={codingProjects['knowde']} />
         <CodeProject project={codingProjects['portfolio64']} />
-      </div>
-      <div className='card-col-container'>
         <h3 className='white'>art</h3>
         <ArtProject project={artProjects['boxer']} />
         <ArtProject project={artProjects['portrait_1']} />
-        
-      </div>
     </div>
     
     
     <div className='space'></div>
+    <div className='space'></div>
+    <div className='space'></div>
     
     <h2 className='rb-grad-text card-header center '>Contact Me</h2>
-    <div id='contact-me'>
-
-      
-      
-      <div className='card-col-container'>
-        <div className='contact-bg'>
-          <div className='card-content'>
+    <div id='contact-me' className='card-col-container'>
             <h3 className='white padded'>For any opportunities or general inquiries, feel free to contact me below:</h3>
             
               <div className='contact-form'>
@@ -167,7 +156,7 @@ const App = () => {
             
             <div className='flex-icons padded'>
               <a href='https://www.linkedin.com/in/johncuv/' className='point-on'>
-                <FaLinkedin color='white' size='4rem' />
+                <FaLinkedin href='google.com' color='white' size='4rem' />
               </a>
               <a href='instagram.com' className='point-on'>
                 <FaInstagram color='white' size='4rem' />
@@ -180,9 +169,7 @@ const App = () => {
               </a>
             </div>
           </div>
-      </div>
-    </div>
-    </div>
+
     </div>
 
 )
