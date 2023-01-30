@@ -9,44 +9,48 @@ const App = () => {
   return (
   <div>
     <div className='face'>
-        <Spline scene="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode" />
+    </div>
+    
+    <div className='title-container wave'>
+      <div id='title' >
+        <h1 className='rb-grad-text'>
+          It's-a me... 
+          <br></br>
+          <span className='name'>John.</span>
+        </h1>
       </div>
-    
-    <div id='title'>
-      <h1 className='rb-grad-text'>
-        It's-a me... 
-        <br></br>
-        <span className='name'>John.</span>
-      </h1>
     </div>
     
-    <div className='space'></div>
 
-    <h2 className='card-header ry-grad-text center'>About</h2>
-    <div id='about' className='card-container'>
-      <motion.div
-        className="card"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}>
-
-        <div className='card-content'>
-        
-          <p className='med-font'>
-            I'm a developer and artist based in California.
-            <br></br>
-            I recently graduated from UCI and I'm looking for new opportunities.
-            <br></br>
-            My main languages right now are Python and JavaScript but I've worked with C, C++, and Java in the past and I'm always willing to learn new tech for a project. 
-            <br></br>
-
-          </p>n
-        </div>
-      </motion.div>
-    </div>
-    <div className='space'></div>
     
+    
+    <div className='space bg-color-green'></div>
+    <div id='about' className='bg-color-green'>
+      <h2 className='card-header ry-grad-text center'>About</h2>
+      <div className='card-container'>
+        <motion.div
+          className="card"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}>
+
+          <div className='card-content'>
+            <ul>
+              <li>Hi, I'm John, a developer and artist based in California.</li>
+              <li>I recently graduated from UCI with a BS in Computer Science and I'm currently looking for new opportunities.</li>
+              <li>I've mostly been using Python and JavaScript for web development, but I've enjoyed working with C, C++, and Java in the
+              past; I'm always willing to learn new languages or framework for a project.</li>
+              <li>I'm currently interested in learning more about UX/UI, mobile development, and AR.</li>
+              <li>Outside of coding I love creating digital illustrations and paintings (I plan on posting some of them soon)</li>
+              <li>Feel free to check out my projects down below or contact me on my socials.</li>
+            </ul>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+    
+    <div className='wave2'></div>
     <h2 className='card-header center'>Experience</h2>
-    
     <div id='experience' className='card-col-container'>      
       <div className="tl-container no-point tl-line center">
         <motion.div
@@ -72,7 +76,7 @@ const App = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}> 
           <div className='tl-item-content'>
-            <h3>Software Engineer Intern 
+            <h3>Software Engineer Capstone 
               <span className='black'> at</span> <strong>Knowde</strong></h3>
             <h4>2022</h4>
             <br></br>
@@ -125,52 +129,46 @@ const App = () => {
     <h2 className='card-header gb-grad-text center'>Recent Projects</h2>
     
     <div id='projects' className='card-col-container'>
-        <h3 className='white'>code</h3>
         <CodeProject project={codingProjects['bapple']} />
         <CodeProject project={codingProjects['knowde']} />
         <CodeProject project={codingProjects['portfolio64']} />
+        {/*
         <h3 className='white'>art</h3>
         <ArtProject project={artProjects['boxer']} />
         <ArtProject project={artProjects['portrait_1']} />
+        */}
     </div>
     
-    
-    <div className='space'></div>
-    <div className='space'></div>
     <div className='space'></div>
     
     <h2 className='rb-grad-text card-header center '>Contact Me</h2>
-    <div id='contact-me' className='card-col-container'>
-            <h3 className='white padded'>For any opportunities or general inquiries, feel free to contact me below:</h3>
-            
-              <div className='contact-form'>
-                <form action="https://formsubmit.co/johncuviello99@gmail.com" method="POST">
-                  <input type="text" name="name" placeholder="Name" required />
-                  <input type="email" name="email" placeholder="Email" required />
-                  <input type="message" name="msg" placeholder="Message" className='msg-box' required />
-                  <button className='point-on' type="submit">Send</button>
-                </form>
-              </div>
-            <h3 className='white padded'>or check out my socials:</h3>
-            
-            
-            <div className='flex-icons padded'>
-              <a href='https://www.linkedin.com/in/johncuv/' className='point-on'>
-                <FaLinkedin href='google.com' color='white' size='4rem' />
-              </a>
-              <a href='instagram.com' className='point-on'>
-                <FaInstagram color='white' size='4rem' />
-              </a>
-              <a href='https://github.com/parmeyjohn' className='point-on'>
-                <FaGithub color='white' size='4rem' />
-              </a>
-              <a href='https://github.com/parmeyjohn' className='point-on'>
-                <FaGithub color='white' size='4rem' />
-              </a>
-            </div>
-          </div>
-
+    <div className='card-col-container'>
+      <div id='contact-me' className='green-card-bg'>
+        <h3 className='white padded center front'>For any opportunities or general inquiries, feel free to contact me below:</h3>   
+        <div className='contact-form'>
+          <form action="https://formsubmit.co/johncuviello99@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Name" className='front' required />
+            <input type="email" name="email" placeholder="Email" className='front' required />
+            <input type="message" name="msg" placeholder="Message" className='msg-box front' required />
+            <button className='front' type="submit">Send</button>
+          </form>
+        </div>
+        <h3 className='white padded center front'>or check out my socials:</h3>
+        <div className='flex-icons padded'>
+          <a href='https://www.linkedin.com/in/johncuv/' className='point-on front'>
+            <FaLinkedin href='google.com' color='white' size='4rem' />
+          </a>
+          <a href='instagram.com' className='point-on front'>
+            <FaInstagram color='white' size='4rem' />
+          </a>
+          <a href='https://github.com/parmeyjohn' className='point-on front'>
+            <FaGithub color='white' size='4rem' />
+          </a>
+        </div>
+      </div>
     </div>
+    <div className='space'></div>
+  </div>
 
 )
 }
