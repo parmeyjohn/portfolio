@@ -147,13 +147,18 @@ h4 {
 }
 
 .card-content {
-  font-size: var(--fs-sml); 
+  font-size: var(--fs-xs); 
   padding-left: 10px;
   font-weight: 2px;
 }
 
+div.card-content>ul {
+  padding-left: 20px
+}
+
 div.card-content>ul>li {
   padding-top: 15px;
+  padding-left: 5px
 }
 
 .padded {
@@ -214,6 +219,7 @@ div.card-content>ul>li {
   margin-left: 5%;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-size: var(--fs-xs)
 }
 
 .tl-content {
@@ -385,7 +391,7 @@ form {
   content: "";
   width: 90%;
   max-width: 1400px;
-  height: 120%;
+  height: 110%;
   position: absolute;
   background-color: var(--dark-green);
   border-radius: 20px;
@@ -431,6 +437,7 @@ form {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: auto;
 }
 
 .front {
@@ -472,22 +479,22 @@ form {
   cursor: pointer;
 }
 
-.wave {
+.top-wave {
   aspect-ratio: 960 / 540;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url('../public/images/wave10.svg');
+  background-image: url('../public/images/wave.svg');
   width: 100%;
   z-index: var(--lvl-bg);
 }
 
-.wave2 {
+.bot-wave {
   aspect-ratio: 960 / 540;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  background-image: url('../public/images/wave12.svg');
+  background-image: url('../public/images/wave2.svg');
   width: 100%;
   max-height: 540px;
   z-index: var(--lvl-bg);
@@ -524,7 +531,7 @@ form {
   width: 100%;
   max-width: 1400px;
   height: 50%;
-  min-height: 500px;
+  min-height: 650px;
   position: absolute;
   background-color: var(--dark-green);
   border-radius: 20px;
@@ -541,4 +548,16 @@ form {
 
 .bg-color-green {
   background-color: #09332e;
+}
+
+.bot-page-wave {
+  aspect-ratio: 960 / 540;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-image: url('../public/images/wave.svg');
+  width: 100%;
+  z-index: var(--lvl-bg);
+  max-height: 400px;
+
 }

@@ -27,9 +27,9 @@
                 "image": "",
                 "link" : "#",
                 "bullets" : [
-                          "Portfolio site to improve my CSS and learn 3d modeling",
-                          "The mario face 3d model took around 10 hours to complete and was done in the SplineJS editor",
-                          "This site was inspired by the title screen in Mario 64, ",
+                          "Portfolio site to improve fundamentals of CSS and learn 3d modeling",
+                          "The 3d model took around 10 hours to complete and was created in the SplineJS editor",
+                          "This site was inspired by the title screen in Mario 64",
                           "Stack: JavaScript (React, SplineJS), HTML, and CSS"
                         ]
     } 

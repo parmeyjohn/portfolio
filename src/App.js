@@ -12,7 +12,7 @@ const App = () => {
       <Spline scene="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode" />
     </div>
     
-    <div className='title-container wave'>
+    <div className='title-container top-wave'>
       <div id='title' >
         <h1 className='rb-grad-text'>
           It's-a me... 
@@ -34,22 +34,22 @@ const App = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}>
 
-          <div className='card-content'>
+          <div className='card-content sml-font'>
             <ul>
               <li>Hi, I'm John, a developer and artist based in California.</li>
-              <li>I recently graduated from UCI with a BS in Computer Science and I'm currently looking for new opportunities.</li>
-              <li>I've mostly been using Python and JavaScript for web development, but I've enjoyed working with C, C++, and Java in the
+              <li>I recently graduated from UCI with a BS in Computer Science and am currently looking for new opportunities.</li>
+              <li>Recently I've been using JavaScript and Python for web development, but I've enjoyed working with C, C++, and Java in the
               past; I'm always willing to learn new languages or framework for a project.</li>
               <li>I'm currently interested in learning more about UX/UI, mobile development, and AR.</li>
-              <li>Outside of coding I love creating digital illustrations and paintings (I plan on posting some of them soon)</li>
+              <li>Outside of coding I also enjoy creating digital illustrations/paintings (some of which I plan on posting soon).</li>
               <li>Feel free to check out my projects down below or contact me on my socials.</li>
             </ul>
           </div>
         </motion.div>
       </div>
     </div>
-    
-    <div className='wave2'></div>
+    <div className='space bg-color-green'></div>
+    <div className='bot-wave'></div>
     <h2 className='card-header center'>Experience</h2>
     <div id='experience' className='card-col-container'>      
       <div className="tl-container no-point tl-line center">
@@ -141,7 +141,7 @@ const App = () => {
     
     <div className='space'></div>
     
-    <h2 className='rb-grad-text card-header center '>Contact Me</h2>
+    <h2 className='rb-grad-text card-header center'>Contact Me</h2>
     <div className='card-col-container'>
       <div id='contact-me' className='green-card-bg'>
         <h3 className='white padded center front'>For any opportunities or general inquiries, feel free to contact me below:</h3>   
@@ -167,7 +167,8 @@ const App = () => {
         </div>
       </div>
     </div>
-    <div className='space'></div>
+    <div className='bot-page-wave'></div>
+    
   </div>
 
 )
