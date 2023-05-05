@@ -7,122 +7,82 @@ import artProjects from "./data/artProjects.json"
  
 const App = () => {
   return (
-  <div>
-    <div className='face'>
+  <div className='bg-slate-900 h-screen w-screen overflow-y-auto'>
+    {/* <div className='face'>
       <Spline scene="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode" />
-    </div>
-    
-    <div className='title-container top-wave'>
-      <div id='title' >
-        <h1 className='rb-grad-text'>
-          It's-a me... 
-          <br></br>
-          <span className='name'>John.</span>
-        </h1>
+    </div> */}
+    <div className='w-full h-screen bg-slate-800'>
+      <div className='flex w-full h-full flex justify-center items-center text-4xl'>
+        It's a me John
       </div>
     </div>
     
+    <div id='about' className='p-4 my-20  w-full h-screen flex flex-col items-center justify-center'>
+      <h2 className='text-4xl my-10 font-semibold'>
+        About
+      </h2>
+      <div className='p-8 rounded-xl w-full h-auto bg-slate-100 max-w-4xl'>
+        <ul>
+          <li>Hi, I'm John, a dev and artist based in California.</li>
+          <li>I recently graduated from UCI with a BS in Computer Science and am currently looking for new opportunities.</li>
+          <li>Recently I've been using JavaScript and Python for web development, but I've enjoyed working with C, C++, and Java in the
+          past; I'm always willing to learn a new language or framework for a project.</li>
+          <li>My current interests include UX/UI Design, mobile development, and AR.</li>
+          <li>Feel free to check out my projects down below or contact me on my socials.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id='experience' className='w-full h-auto p-4 my-20 flex flex-col items-center before:bg-teal-900 before:h-full before:absolute'>
+      
+      <h2 className='text-4xl my-10 font-semibold'>
+        Experience
+      </h2>
+      
+      <div className='w-full h-auto max-w-4xl'>
+        <div className='p-8 my-10 rounded-xl w-full h-auto bg-slate-100'>
+          <h3 className='text-xl font-semibold mb-2'>B.S. in Computer Science at UCI</h3>
+          <h4 className='ml-2'>Relevant Coursework:</h4>
+          <ul className='ml-4'>
+            <li>Data Structure Implementation and Analysis</li>
+            <li>Design and Analysis of Algorithms</li>
+            <li>Principles in System Design</li>
+            <li>Data Management</li>
+            <li>Machine Learning and Data Mining</li>
+          </ul>
+        </div>
 
-    
-    
-    <div className='space bg-color-green'></div>
-    <div id='about' className='bg-color-green'>
-      <h2 className='card-header ry-grad-text center'>About</h2>
-      <div className='card-container'>
-        <motion.div
-          className="card"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}>
+        <div className='p-8 my-10 rounded-xl w-full h-auto bg-slate-100'>
+          <h3 className='text-xl font-semibold mb-2'>Software Engineer Capstone at Knowde</h3>
+          <ul className='ml-4'>
+            <li>Developed application that ingests, parses, and extracts data from chemical PDF documents</li>
+            <li>Automated the process of manually parsing and entering sensitive data into their database from 200+ documents weekly</li>
+            <li>Expedited document parsing from 6+ minutes manually to less than 1 minute per doc</li>
+            <li>Attained steady and accurate progress using agile development with Jira, and regression testing</li>
+          </ul>
+        </div>
 
-          <div className='card-content sml-font'>
-            <ul>
-              <li>Hi, I'm John, a developer and artist based in California.</li>
-              <li>I recently graduated from UCI with a BS in Computer Science and am currently looking for new opportunities.</li>
-              <li>Recently I've been using JavaScript and Python for web development, but I've enjoyed working with C, C++, and Java in the
-              past; I'm always willing to learn new languages or framework for a project.</li>
-              <li>I'm currently interested in learning more about UX/UI, mobile development, and AR.</li>
-              <li>Outside of coding I also enjoy creating digital illustrations/paintings (some of which I plan on posting soon).</li>
-              <li>Feel free to check out my projects down below or contact me on my socials.</li>
-            </ul>
-          </div>
-        </motion.div>
+        <div className='p-8 my-10 rounded-xl w-full h-auto bg-slate-100'>
+          <h3 className='text-xl font-semibold mb-2'>Team Member at Chipotle</h3>
+          <ul className='ml-2'>
+            <li>Amplified throughput on the cash register and food line in a fast-paced team environment</li>
+            <li>Provided exemplary service to over 150 customers per shift</li>
+          </ul>
+        </div>
+
+        <div className='p-8 my-10 rounded-xl w-full h-auto bg-slate-100'>
+          <h3 className='text-xl font-semibold mb-2'>Sales Associate at Vans</h3>
+          <ul className='ml-2'>
+            <li>Worked the shoe floor, cash register, and apparel deck engaging with customers and assisting coworkers</li>
+            <li>Memorized dozens of shoe and apparel styles to improve ability to meet customers’ needs</li>
+          </ul>
+        </div>
+
+
       </div>
     </div>
-    <div className='space bg-color-green'></div>
-    <div className='bot-wave'></div>
-    <h2 className='card-header center'>Experience</h2>
-    <div id='experience' className='card-col-container'>      
-      <div className="tl-container no-point tl-line center">
-        <motion.div
-          className="tl-item"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}> 
-          <div className='tl-item-content'>
-            <h3 className='font-sml'>B.S. in Computer Science <span className='black'>at</span> UCI</h3>
-            <h4>2022</h4>
-            <br></br>
-            <p><strong>Relevant Coursework:</strong> </p>
-            <ul>
-              <li>Data Structure Implementation and Analysis</li>
-              <li>Design and Analysis of Algorithms</li>
-              <li>Principles in System Design</li>
-              <li>Data Management</li>
-              <li>Machine Learning and Data Mining</li>
-            </ul>
-          </div>
-        </motion.div>
-        <motion.div
-          className="tl-item"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}> 
-          <div className='tl-item-content'>
-            <h3>Software Engineer Capstone 
-              <span className='black'> at</span> <strong>Knowde</strong></h3>
-            <h4>2022</h4>
-            <br></br>
-            <ul>
-              <li>Developed application that ingests, parses, and extracts data from chemical PDF documents</li>
-              <li>Automated the process of manually parsing and entering sensitive data into their database from 200+ documents weekly</li>
-              <li>Expedited document parsing from 6+ minutes manually to less than 1 minute per doc</li>
-              <li>Attained steady and accurate progress using agile development with Jira, and regression testing</li>
-            </ul>
-          </div>
-        </motion.div>
-        <motion.div
-          className="tl-item"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}> 
-          <div className='tl-item-content'>
-            
-            <h3>Team Member 
-              <span className='black'> at</span> <strong>Chipotle</strong></h3>
-            <h4>2021</h4>
-            <br></br>
-            <ul>
-              <li>Amplified throughput on the cash register and food line in a fast-paced team environment</li>
-              <li>Provided exemplary service to over 150 customers per shift</li>
-            </ul>
-          </div>
-        </motion.div>
-        <motion.div
-          className="tl-item"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}> 
-          <div className='tl-item-content'>
-            
-            <h3>Sales Associate 
-              <span className='black'> at</span> <strong>Vans</strong></h3>
-            <h4>2020</h4>
-            <br></br>
-            <ul>
-              <li>Worked the shoe floor, cash register, and apparel deck engaging with customers and assisting coworkers</li>
-              <li>Memorized dozens of shoe and apparel styles to improve ability to meet customers’ needs</li>
-            </ul>
-          </div>
-        </motion.div>
-        <div className='tl-line'></div>
-      </div>
-    </div>
+
+  
 
     <div className='space'></div>
 
@@ -139,7 +99,6 @@ const App = () => {
         */}
     </div>
     
-    <div className='space'></div>
     
     <h2 className='rb-grad-text card-header center'>Contact Me</h2>
     <div className='card-col-container'>
