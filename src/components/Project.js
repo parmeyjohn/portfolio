@@ -16,19 +16,13 @@ const ArtProject = ({project}) => {
 
 const CodeProject = ({project}) => {
   return (
-    <motion.div
-      onClick={() => window.open(project.link)}
-      id={project.id} 
-      className='wide-card point-on'
-      layout
-      whileHover={{scale: 1.05}}>
-        <motion.div layout='position' className='card-content'>
-          <h4 layout='position' className='wide-card-header'>{project.name}</h4>
+    
+        <div className='bg-slate-200 rounded-xl p-4 my-10 first:mt-0 last:mb-0'>
+          <h4 className='text-xl font-semibold mb-2'>{project.name}</h4>
           <ul>
             {project.bullets.map((bullet, i) => <li key={i}>{bullet}</li>)}
           </ul>
-        </motion.div>     
-    </motion.div>
+        </div>
   )
 }
 
