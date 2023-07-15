@@ -4,6 +4,8 @@ import { FaLinkedin, FaGithub, FaInstagram, Fa } from "react-icons/fa";
 import { ArtProject, CodeProject } from "./components/Project";
 import codingProjects from "./data/codeProjects.json";
 import artProjects from "./data/artProjects.json";
+import { Experience } from "./components/Experience";
+import { Project } from "./components/Project";
 
 const App = () => {
   return (
@@ -43,7 +45,7 @@ const App = () => {
       </nav>
 
       <div className="w-full h-full max-w-3xl mx-auto overflow-y-auto">
-        <div className="bg-slate-200 rounded-xl h-60 w-60 fixed m-8 z-10">
+        <div className="bg-slate-200 rounded-xl h-60 w-60 fixed m-8 z-20">
           <spline-viewer url="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode"></spline-viewer>
         </div>
 
@@ -102,182 +104,120 @@ const App = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-col h-auto">
+        <div className="flex justify-between w-full h-auto">
           <div className="bg-green-300 w-60 h-fit rounded-xl p-4 m-8 sticky top-72">
+            <h2 className="text-lg">Projects</h2>
+          </div>
+          <div className="h-full w-96">
+          <Project
+                title={"Cooldown"}
+                link={"usecooldown.com"}
+                bullets={[
+                  "Constructed a responsive front-end to display journal entries using React and Tailwind CSS",
+                  "Developed a back-end REST API with Node, Express, and MongoDB Atlas",
+                  "Authenticated users via JSON web tokens, password hashing, and protected React Router client-side routes",
+                  "Consumed external API to populate images and titles based on user search results",
+                  "Applied end-to-end, integration, and unit testing with Cypress and Jest"
+                ]}
+                tags={[
+                  "React",
+                  "JavaScript",
+                  "TailwindCSS",
+                  "Node",
+                  "Express",
+                  "MongoDB",
+                  "Cypress",
+                  "Jest",
+                  "MongoDB",
+                ]}
+              ></Project>
+
+          </div>
+        </div>
+
+        <div className="w-full flex flex-col h-auto">
+          <div className="bg-green-300 w-60 h-fit rounded-xl p-4 m-8 sticky top-72 z-10">
             <h2 className="text-lg">Experience</h2>
           </div>
           <div className="flex justify-between w-full h-auto">
-            <div className="w-60 flex m-8 justify-end sticky top-80">
+            <div className="w-60 flex mx-8 justify-end sticky top-80">
               <div className="bg-green-300 w-fit p-4 rounded-xl ">
                 <h2 className="text-lg">2022</h2>
               </div>
             </div>
             <div className="h-full w-96">
-              <div className="bg-green-900 rounded-xl p-4 m-8 h-fit">
-                <h1 className="text-md">B.S. in Computer Science @ UCI </h1>
-                <h4 className="ml-2">Relevant Coursework:</h4>
-                <ul className="ml-4">
-                  <li>Data Structure Implementation and Analysis</li>
-                  <li>Design and Analysis of Algorithms</li>
-                  <li>Principles in System Design</li>
-                  <li>Data Management</li>
-                  <li>Machine Learning and Data Mining</li>
-                </ul>
-              </div>
+              <Experience
+                title={"B.S in Computer Science"}
+                company={"UCI"}
+                subtitle={"Relevant Coursework:"}
+                bullets={[
+                  "Data Structure Implementation and Analysis",
+                  "Design and Analysis of Algorithms",
+                  "Principles in System Design",
+                  "Data Management",
+                  "Machine Learning and Data Mining"
+                ]}
+              ></Experience>
 
-              <div className="bg-green-900 rounded-xl p-4 m-8 h-fit">
-                <h1 className="text-md">
-                  Software Engineer Capstone @ Knowde
-                </h1>
-                <ul className="ml-4">
-                  <li>
-                    Developed application that ingests, parses, and extracts
-                    data from chemical PDF documents
-                  </li>
-                  <li>
-                    Automated the process of manually parsing and entering
-                    sensitive data into their database from 200+ documents
-                    weekly
-                  </li>
-                  <li>
-                    Expedited document parsing from 6+ minutes manually to less
-                    than 1 minute per doc
-                  </li>
-                  <li>
-                    Attained steady and accurate progress using agile
-                    development with Jira, and regression testing
-                  </li>
-                </ul>
-              </div>
+              <Experience
+                title={"Software Engineer Capstone"}
+                company={"Knowde"}
+                bullets={[
+                  "Amplified throughput on the cash register and food line in a fast-paced team environment",
+                  "Provided exemplary service to over 150 customers per shift",
+                ]}
+              ></Experience>
             </div>
-            </div>
-            <div className="flex justify-between w-full h-auto">
-              <div className="w-60 flex m-8 justify-end sticky top-80">
-                <div className="bg-green-300 w-fit p-4 rounded-xl ">
-                  <h2 className="text-lg">2021</h2>
-                </div>
-              </div>
-              <div className="h-full w-96">
-                <div className="bg-green-900 rounded-xl p-4 m-8 h-fit">
-                  <h1 className="text-md">Team Member @ Chipotle</h1>
-                  <ul className="ml-2">
-                    <li>
-                      Amplified throughput on the cash register and food line in
-                      a fast-paced team environment
-                    </li>
-                    <li>
-                      Provided exemplary service to over 150 customers per shift
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-green-900 rounded-xl p-4 m-8 h-fit">
-                  <h1 className="text-md">Sales Associate @ Vans</h1>
-                  <ul className="ml-2">
-                    <li>
-                      Worked the shoe floor, cash register, and apparel deck
-                      engaging with customers and assisting coworkers
-                    </li>
-                    <li>
-                      Memorized dozens of shoe and apparel styles to improve
-                      ability to meet customers’ needs
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-        </div>
-      </div>
-
-      <div
-        id="about"
-        className="p-4 my-20  w-full h-screen flex flex-col items-center justify-center"
-      >
-        <h2 className="text-4xl my-10 font-semibold">About</h2>
-        <div className="p-8 rounded-xl w-full h-auto bg-slate-100 max-w-4xl"></div>
-      </div>
-
-      <div
-        id="experience"
-        className="w-full h-auto p-4 my-20 flex flex-col items-center before:bg-teal-900 before:h-full before:absolute"
-      >
-        <h2 className="text-4xl my-10 font-semibold">Experience</h2>
-
-        <div className="w-full h-auto max-w-4xl">
-          <div className="p-8 my-10 rounded-xl w-full h-auto bg-slate-100">
-            <h3 className="text-xl font-semibold mb-2">
-              Software Engineer Capstone at Knowde
-            </h3>
-            <ul className="ml-4">
-              <li>
-                Developed application that ingests, parses, and extracts data
-                from chemical PDF documents
-              </li>
-              <li>
-                Automated the process of manually parsing and entering sensitive
-                data into their database from 200+ documents weekly
-              </li>
-              <li>
-                Expedited document parsing from 6+ minutes manually to less than
-                1 minute per doc
-              </li>
-              <li>
-                Attained steady and accurate progress using agile development
-                with Jira, and regression testing
-              </li>
-            </ul>
           </div>
-
-          <div className="p-8 my-10 rounded-xl w-full h-auto bg-slate-100">
-            <h3 className="text-xl font-semibold mb-2">
-              Team Member at Chipotle
-            </h3>
-            <ul className="ml-2">
-              <li>
-                Amplified throughput on the cash register and food line in a
-                fast-paced team environment
-              </li>
-              <li>
-                Provided exemplary service to over 150 customers per shift
-              </li>
-            </ul>
-          </div>
-
-          <div className="p-8 my-10 rounded-xl w-full h-auto bg-slate-100">
-            <h3 className="text-xl font-semibold mb-2">
-              Sales Associate at Vans
-            </h3>
-            <ul className="ml-2">
-              <li>
-                Worked the shoe floor, cash register, and apparel deck engaging
-                with customers and assisting coworkers
-              </li>
-              <li>
-                Memorized dozens of shoe and apparel styles to improve ability
-                to meet customers’ needs
-              </li>
-            </ul>
+          <div className="flex justify-between w-full h-auto">
+            <div className="w-60 flex m-8 justify-end sticky top-80">
+              <div className="bg-green-300 w-fit p-4 rounded-xl ">
+                <h2 className="text-lg">2021</h2>
+              </div>
+            </div>
+            <div className="h-full w-96">
+              <Experience
+                title={"Team Member"}
+                company={"Chipotle"}
+                bullets={[
+                  "Amplified throughput on the cash register and food line in a fast-paced team environment",
+                  "Provided exemplary service to over 150 customers per shift",
+                ]}
+              ></Experience>
+              
+              <Experience
+                title={"Sales Associate"}
+                company={"Vans"}
+                bullets={[
+                  "Worked the shoe floor, cash register, and apparel deck engaging with customers and assisting coworkers",
+                  "Memorized dozens of shoe and apparel styles to improve ability to meet customers’ needs",
+                ]}
+              ></Experience>
+            </div>
           </div>
         </div>
+        
+        <div className="flex justify-between w-full h-auto">
+          <div className="bg-green-300 w-60 h-fit rounded-xl p-4 m-8 sticky top-72">
+            <h2 className="text-lg">Projects</h2>
+          </div>
+          <div className="h-full w-96">
+            <div className="bg-green-900 rounded-xl p-4 m-8 h-fit">
+              
+            </div>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       </div>
-
-      <div
-        id="projects"
-        className="w-full h-auto p-4 my-20 flex flex-col items-center"
-      >
-        <h2 className="text-4xl my-10 font-semibold">Projects</h2>
-        <CodeProject project={codingProjects["bapple"]} />
-        <CodeProject project={codingProjects["knowde"]} />
-        <CodeProject project={codingProjects["portfolio64"]} />
-        {/*
-        <h3 className='white'>art</h3>
-        <ArtProject project={artProjects['boxer']} />
-        <ArtProject project={artProjects['portrait_1']} />
-        */}
-      </div>
-
-      <div className="bot-page-wave"></div>
     </div>
   );
 };

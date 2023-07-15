@@ -1,29 +1,19 @@
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
-const ArtProject = ({project}) => {
+const Project = ({ title, link, media, bullets }) => {
+
+  
   return (
-    <motion.div
-      id={project.id} 
-      className='wide-card point-on'
-      layout
-      whileHover={{scale: 1.05}}>
-        <motion.div layout='position' className='card-content'>
-          <h4 className='wide-card-header white'>{project.name}</h4>
-        </motion.div>
-    </motion.div>
-  )
-}   
+    <div className="bg-green-900 rounded-xl p-4 m-8 h-fit">
+      { link ? <a href={link}><h1>{title}</h1></a>: <h1>{title}</h1> }
+      <div className="bg-red-900 w-80 h-80"></div>
+      <ul className="">
+        {bullets.map((b) => (
+          <li>{b}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-const CodeProject = ({project}) => {
-  return (
-    
-        <div className='bg-slate-200 rounded-xl p-4 my-10 first:mt-0 last:mb-0'>
-          <h4 className='text-xl font-semibold mb-2'>{project.name}</h4>
-          <ul>
-            {project.bullets.map((bullet, i) => <li key={i}>{bullet}</li>)}
-          </ul>
-        </div>
-  )
-}
-
-export { ArtProject, CodeProject }
+export { Project };
