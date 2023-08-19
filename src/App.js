@@ -1,52 +1,46 @@
-import Spline from "@splinetool/react-spline";
-import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaInstagram, Fa } from "react-icons/fa";
-import { ArtProject, CodeProject } from "./components/Project";
-import codingProjects from "./data/codeProjects.json";
-import artProjects from "./data/artProjects.json";
 import { Experience } from "./components/Experience";
 import { Project } from "./components/Project";
 
 const App = () => {
   return (
-    <div className="bg-slate-900 h-screen w-full">
-      <nav className="hidden bg-emerald-600 text-white fixed w-full rounded-b-xl">
-        <div className="p-4 max-w-4xl mx-auto flex justify-between items-center">
-          <div>
-            <h1>John Cuviello</h1>
+    <div className=" h-auto w-full bg-gradient-to-b from-indigo-950 to-slate-950">
+
+      <div className="w-full h-full max-w-3xl mx-auto ">
+        <div className="bg-slate-200 rounded-xl h-60 w-60 fixed m-8 p-4 z-20 ">
+          <div className="bg-emerald-200 rounded-full w-24 h-24 mx-auto">
+
           </div>
-          <div className="flex justify-around">
-            <a href="#about" className="px-2">
-              About
-            </a>
-            <a href="#experience" className="px-2">
-              Experience
-            </a>
-            <a href="#projects" className="px-2">
-              Projects
-            </a>
+          <div className=" flex-col items-center h-fit w-fit mx-auto">
+            <h1 className="text-lg text-center">John Cuviello</h1>
+            <h2>
+              Aspiring Software Engineer
+            </h2>
+            <h2>
+              Recent CS Grad @ UCI
+            </h2>
+            <h2>
+              JavaScript, Python
+            </h2>
+          </div>
+          <div className="flex justify-center m-2">
+
             <a
               href="https://www.linkedin.com/in/johncuv/"
               className="point-on front px-2"
             >
-              <FaLinkedin href="google.com" color="white" size="1.5rem" />
+              <FaLinkedin href="google.com" size="1.5rem" />
             </a>
             <a href="instagram.com" className="point-on front px-2">
-              <FaInstagram color="white" size="1.5rem" />
+              <FaInstagram size="1.5rem" />
             </a>
             <a
               href="https://github.com/parmeyjohn"
               className="point-on front px-2"
             >
-              <FaGithub color="white" size="1.5rem" />
+              <FaGithub size="1.5rem" />
             </a>
           </div>
-        </div>
-      </nav>
-
-      <div className="w-full h-full max-w-3xl mx-auto overflow-y-auto">
-        <div className="bg-slate-200 rounded-xl h-60 w-60 fixed m-8 z-20">
-          <spline-viewer url="https://prod.spline.design/wDQw1bMkAQ9L5avp/scene.splinecode"></spline-viewer>
         </div>
 
         <div className="flex justify-between w-full h-auto">
@@ -54,10 +48,10 @@ const App = () => {
             <h2 className="text-lg ">About</h2>
           </div>
           <div className="h-screen w-96">
-            <div className="bg-gradient-to-t from-blue-300 to-blue-200 rounded-xl p-4 m-8 h-fit">
-            <h1 className="text-xl font-semibold text-blue-600 p-2">Hi, I'm John, </h1>
+            <div className="bg-gradient-to-t from-blue-300 to-blue-200 rounded-xl p-4 m-8 h-80">
+              <h1 className="text-xl font-semibold text-blue-600 p-2">Hi, I'm John, </h1>
               <ul className="ml-2">
-                
+
                 <li className="pb-2">a dev and artist based in California.</li>
                 <li className="pb-2">
                   I recently graduated from UCI with a BS in Computer Science
@@ -72,7 +66,7 @@ const App = () => {
                   Feel free to check out my projects down below or contact me on
                   my socials.
                 </li>
-                
+
               </ul>
             </div>
           </div>
@@ -104,7 +98,7 @@ const App = () => {
                 "Jest"
               ]}
             ></Project>
-            
+
             <Project
               title={"Fullstack E-commerce Site"}
               bullets={[
@@ -186,16 +180,16 @@ const App = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="flex justify-between w-full h-auto">
           <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 m-8 sticky top-72 border-b-4 border-blue-600">
             <h2 className="text-lg ">Contact</h2>
           </div>
           <div className="h-screen w-96">
             <div className="bg-gradient-to-t from-blue-300 to-blue-200 rounded-xl p-4 m-8 h-fit">
-            <h1 className="text-xl font-semibold text-blue-600 p-2">Hi, I'm John, </h1>
+              <h1 className="text-xl font-semibold text-blue-600 p-2">Hi, I'm John, </h1>
               <div className="flex">
-                  <a
+                <a
                   href="https://www.linkedin.com/in/johncuv/"
                   className="point-on front px-2"
                 >
@@ -211,11 +205,11 @@ const App = () => {
                   <FaGithub color="white" size="1.5rem" />
                 </a>
               </div>
-                
+
             </div>
           </div>
         </div>
-      
+
 
       </div>
     </div>
