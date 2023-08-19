@@ -104,6 +104,24 @@ const App = () => {
                 "Jest"
               ]}
             ></Project>
+            
+            <Project
+              title={"Fullstack E-commerce Site"}
+              bullets={[
+                "Crafted an appealing front-end to navigate, filter, and sort products with React and Tailwind CSS",
+                "Utilized NextJS for data fetching, routing, and server-side rendering for improved performance and SEO",
+                "Stored data for 100+ products and images using Firestore and Firebase Cloud Storage",
+                "Processed user purchases and customer data securely using the Stripe API"
+              ]}
+              tags={[
+                "React",
+                "JavaScript",
+                "TailwindCSS",
+                "NextJS",
+                "GCP",
+                "StripeJS "
+              ]}
+            ></Project>
           </div>
         </div>
 
@@ -168,6 +186,36 @@ const App = () => {
             </div>
           </div>
         </div>
+        
+        <div className="flex justify-between w-full h-auto">
+          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 m-8 sticky top-72 border-b-4 border-blue-600">
+            <h2 className="text-lg ">Contact</h2>
+          </div>
+          <div className="h-screen w-96">
+            <div className="bg-gradient-to-t from-blue-300 to-blue-200 rounded-xl p-4 m-8 h-fit">
+            <h1 className="text-xl font-semibold text-blue-600 p-2">Hi, I'm John, </h1>
+              <div className="flex">
+                  <a
+                  href="https://www.linkedin.com/in/johncuv/"
+                  className="point-on front px-2"
+                >
+                  <FaLinkedin href="google.com" color="white" size="1.5rem" />
+                </a>
+                <a href="instagram.com" className="point-on front px-2">
+                  <FaInstagram color="white" size="1.5rem" />
+                </a>
+                <a
+                  href="https://github.com/parmeyjohn"
+                  className="point-on front px-2"
+                >
+                  <FaGithub color="white" size="1.5rem" />
+                </a>
+              </div>
+                
+            </div>
+          </div>
+        </div>
+      
 
       </div>
     </div>
