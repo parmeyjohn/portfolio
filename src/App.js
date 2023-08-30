@@ -53,9 +53,8 @@ const App = () => {
                   and am currently looking for new opportunities.
                 </li>
                 <li className="pb-2">
-                  I've mostly been using JavaScript and Python for web
-                  development, but I'm always willing to learn a new language or
-                  framework for a project.
+                  I've been working with JavaScript and Python for full-stack web
+                  development, but I'm always willing to learn new languages and tech.
                 </li>
                 <li className="pb-2">
                   Feel free to check out my projects down below or contact me on
