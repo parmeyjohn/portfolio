@@ -8,13 +8,11 @@ const App = () => {
 
       <div className="w-full h-full max-w-3xl mx-auto ">
         <div className="bg-slate-200 rounded-xl h-60 w-60 fixed m-8 p-4 z-20 ">
-          <div className="bg-emerald-200 rounded-full w-24 h-24 mx-auto">
-
-          </div>
+        <img src={require('./images/portrait.JPG')} alt='Portrait of John Cuviello' className="rounded-full w-24 h-24 object-cover object-top -hue-rotate-15 mx-auto"></img>
           <div className=" flex-col items-center h-fit w-fit mx-auto">
             <h1 className="text-lg text-center">John Cuviello</h1>
             <h2>
-              Aspiring Software Engineer
+              Full-stack developer
             </h2>
             <h2>
               Recent CS Grad @ UCI
@@ -27,16 +25,13 @@ const App = () => {
 
             <a
               href="https://www.linkedin.com/in/johncuv/"
-              className="point-on front px-2"
+              className="point-on front px-2 h-fit"
             >
               <FaLinkedin href="google.com" size="1.5rem" />
             </a>
-            <a href="instagram.com" className="point-on front px-2">
-              <FaInstagram size="1.5rem" />
-            </a>
             <a
               href="https://github.com/parmeyjohn"
-              className="point-on front px-2"
+              className="point-on front px-2 h-fit"
             >
               <FaGithub size="1.5rem" />
             </a>
