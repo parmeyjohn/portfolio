@@ -5,62 +5,69 @@ import { Project } from "./components/Project";
 const App = () => {
   return (
     <div className=" h-auto w-full bg-gradient-to-b from-indigo-950 to-slate-950">
-
-      <div className="w-full h-full max-w-3xl mx-auto ">
-        <div className="bg-slate-200 rounded-xl h-60 w-60 fixed m-8 p-4 z-20 ">
-        <img src={require('./images/portrait.JPG')} alt='Portrait of John Cuviello' className="rounded-full w-24 h-24 object-cover object-top -hue-rotate-15 mx-auto"></img>
-          <div className=" flex-col items-center h-fit w-fit mx-auto">
-            <h1 className="text-lg text-center">John Cuviello</h1>
-            <h2>
-              Full-stack developer
-            </h2>
-            <h2>
-              Recent CS Grad @ UCI
-            </h2>
-            <h2>
-              JavaScript, Python
-            </h2>
+      <nav className="sticky h-20 w-full max-w-2xl mx-auto bg-red-900">
+        
+      </nav>
+      <div className="w-full h-full max-w-2xl mx-auto">
+        <div className="bg-slate-200 border-b-8 border-b-indigo-400 rounded-xl h-96 w-full m-8 p-4 z-20 flex items-center justify-center">
+          <div className="flex justify-center items-center mr-24">
+            <img
+              src={require("./images/editedProfile.png")}
+              alt="Portrait of John Cuviello"
+              className="hover:bg-emerald-800 transition-all duration-100 ease-in-out bg-emerald-400 border border-emerald-600 rounded-full w-40 h-40 object-cover object-top -hue-rotate-90 mx-auto"
+            ></img>
           </div>
-          <div className="flex justify-center m-2">
-
-            <a
-              href="https://www.linkedin.com/in/johncuv/"
-              className="point-on front px-2 h-fit"
-            >
-              <FaLinkedin href="google.com" size="1.5rem" />
-            </a>
-            <a
-              href="https://github.com/parmeyjohn"
-              className="point-on front px-2 h-fit"
-            >
-              <FaGithub size="1.5rem" />
-            </a>
+          <div className="h-auto">
+            <p className="text-center">Hi, I'm</p>
+            <p className="text-3xl font-medium text-blue-700 p-2">
+              John Cuviello
+            </p>
+            <p className="text-lg text-center text-slate-400">
+              Web Developer
+            </p>
+            
+            <div className="flex justify-around items-center my-4">
+              <button className="rounded-full border-2 border-emerald-600 bg-emerald-400 hover:bg-emerald-500 transition-all duration-75 p-2 px-4">Resume</button>
+              <button className="rounded-full border-2 border-emerald-600 bg-emerald-400 hover:bg-emerald-500 transition-all duration-75 p-2 px-4">Contact Me</button>
+            </div>
+            <div className="flex justify-center m-2">
+              <a
+                href="https://www.linkedin.com/in/johncuv/"
+                className="point-on front px-2 h-fit"
+              >
+                <FaLinkedin href="google.com" size="2rem" />
+              </a>
+              <a
+                href="https://github.com/parmeyjohn"
+                className="point-on front px-2 h-fit"
+              >
+                <FaGithub size="2rem" />
+              </a>
+            </div>
           </div>
         </div>
 
         <div className="flex justify-between w-full h-auto">
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 m-8 sticky top-72 border-b-4 border-blue-600">
+          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 m-8 sticky border-b-4 border-blue-600">
             <h2 className="text-lg ">About</h2>
           </div>
-          <div className="h-screen w-96">
-            <div className="bg-gradient-to-t from-blue-300 to-blue-200 rounded-xl p-4 m-8 h-80">
-              <h1 className="text-xl font-semibold text-blue-600 p-2">Hi, I'm John, </h1>
+          <div className="h-screen w-60 m-8">
+            <div className="bg-gradient-to-t w-full from-blue-300 to-blue-200 rounded-xl p-4 h-fit">
               <ul className="ml-2">
-
                 <li className="pb-2">a dev and artist based in California.</li>
                 <li className="pb-2">
                   I recently graduated from UCI with a BS in Computer Science
-                  and am currently looking for new opportunities.
+                  and am looking for new opportunities.
                 </li>
                 <li className="pb-2">
-                  I've been working with JavaScript and Python for full-stack web
-                  development, but I'm always willing to learn new languages and tech.
+                  I mostly use JavaScript and Python for full-stack web
+                  development, but I'm always willing to learn new languages and
+                  tech.
                 </li>
                 <li className="pb-2">
                   Feel free to check out my projects down below or contact me on
                   my socials.
                 </li>
-
               </ul>
             </div>
           </div>
@@ -89,7 +96,7 @@ const App = () => {
                 "Express",
                 "MongoDB",
                 "Cypress",
-                "Jest"
+                "Jest",
               ]}
             ></Project>
 
@@ -99,7 +106,7 @@ const App = () => {
                 "Crafted an appealing front-end to navigate, filter, and sort products with React and Tailwind CSS",
                 "Utilized NextJS for data fetching, routing, and server-side rendering for improved performance and SEO",
                 "Stored data for 100+ products and images using Firestore and Firebase Cloud Storage",
-                "Processed user purchases and customer data securely using the Stripe API"
+                "Processed user purchases and customer data securely using the Stripe API",
               ]}
               tags={[
                 "React",
@@ -107,7 +114,7 @@ const App = () => {
                 "TailwindCSS",
                 "NextJS",
                 "GCP",
-                "StripeJS "
+                "StripeJS ",
               ]}
             ></Project>
           </div>
@@ -181,30 +188,13 @@ const App = () => {
           </div>
           <div className="h-screen w-96">
             <div className="bg-gradient-to-t from-blue-300 to-blue-200 rounded-xl p-4 m-8 h-fit">
-              <h1 className="text-xl font-semibold text-blue-600 p-2">Hi, I'm John, </h1>
-              <div className="flex">
-                <a
-                  href="https://www.linkedin.com/in/johncuv/"
-                  className="point-on front px-2"
-                >
-                  <FaLinkedin href="google.com" color="white" size="1.5rem" />
-                </a>
-                <a href="instagram.com" className="point-on front px-2">
-                  <FaInstagram color="white" size="1.5rem" />
-                </a>
-                <a
-                  href="https://github.com/parmeyjohn"
-                  className="point-on front px-2"
-                >
-                  <FaGithub color="white" size="1.5rem" />
-                </a>
-              </div>
-
+              <p>
+                LinkedIn or Email are the most reliable ways to contact me. I
+                would add other socials but I don't use them
+              </p>
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   );
