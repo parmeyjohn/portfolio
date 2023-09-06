@@ -4,67 +4,76 @@ import { Project } from "./components/Project";
 
 const App = () => {
   return (
-    <div className=" h-auto w-full bg-gradient-to-b from-indigo-950 to-slate-950">
-      <nav className="sticky h-20 w-full max-w-2xl mx-auto bg-red-900">
-        
+    <div className="h-auto w-full w-2xl bg-gradient-to-b from-indigo-950 to-slate-950">
+      <nav className=" md:flex text-indigo-200 text-lg sticky h-20 w-full max-w-2xl p-4 mx-auto flex justify-between items-center">
+        <a className="whitespace-nowrap p-1">John Cuviello</a>
+        <div className="flex justify-end items-center">
+        <div className="flex invisible">
+          <a href='#about' className="p-2 hover:underline hover:text-indigo-200 transition-all ">About</a>
+          <a href='#projects' className="p-2 hover:underline hover:text-indigo-200 transition-all ">Projects</a>
+          <a href='#experience' className="p-2 hover:underline hover:text-indigo-200 transition-all ">Experience</a>
+          <a href='#contact' className="p-2 hover:underline hover:text-indigo-200 transition-all ">Contact Me</a>
+        </div>
+        </div>
       </nav>
-      <div className="w-full h-full max-w-2xl mx-auto">
-        <div className="bg-slate-200 border-b-8 border-b-indigo-400 rounded-xl h-96 w-full m-8 p-4 z-20 flex items-center justify-center">
-          <div className="flex justify-center items-center mr-24">
+
+      <div className="w-full h-full max-w-2xl mx-auto mb-16">
+        <div className="bg-slate-200 border-b-8 border-b-indigo-400 rounded-xl h-auto py-16 w-[90%] mx-auto p-4 z-20 flex flex-col md:flex-row items-center justify-center">
+          <div className="flex justify-center items-center md:mr-24">
             <img
               src={require("./images/editedProfile.png")}
               alt="Portrait of John Cuviello"
               className="hover:bg-emerald-800 transition-all duration-100 ease-in-out bg-emerald-400 border border-emerald-600 rounded-full w-40 h-40 object-cover object-top -hue-rotate-90 mx-auto"
             ></img>
           </div>
-          <div className="h-auto">
-            <p className="text-center">Hi, I'm</p>
-            <p className="text-3xl font-medium text-blue-700 p-2">
+          <div className="h-fit text-center my-4">
+            <p className="text-xs mb-2">Hi, I'm</p>
+            <p className="text-3xl font-medium text-blue-700 pb-2">
               John Cuviello
             </p>
-            <p className="text-lg text-center text-slate-400">
+            <p className=" text-center text-slate-400">
               Web Developer
             </p>
             
-            <div className="flex justify-around items-center my-4">
+            <div className="flex justify-around items-center my-8 h-fit">
               <button className="rounded-full border-2 border-emerald-600 bg-emerald-400 hover:bg-emerald-500 transition-all duration-75 p-2 px-4">Resume</button>
               <button className="rounded-full border-2 border-emerald-600 bg-emerald-400 hover:bg-emerald-500 transition-all duration-75 p-2 px-4">Contact Me</button>
             </div>
-            <div className="flex justify-center m-2">
+            <div className="flex justify-around m-2 h-fit">
               <a
                 href="https://www.linkedin.com/in/johncuv/"
                 className="point-on front px-2 h-fit"
               >
-                <FaLinkedin href="google.com" size="2rem" />
+                <FaLinkedin href="google.com" size="3rem" />
               </a>
               <a
                 href="https://github.com/parmeyjohn"
                 className="point-on front px-2 h-fit"
               >
-                <FaGithub size="2rem" />
+                <FaGithub size="3rem" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="flex justify-between w-full h-auto">
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 m-8 sticky border-b-4 border-blue-600">
+        <div id='about' className="flex flex-col md:flex-row justify-between w-full h-auto my-20">
+          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4  my-8 mx-auto md:m-8 sticky border-b-4 top-72 border-blue-600">
             <h2 className="text-lg ">About</h2>
           </div>
-          <div className="h-screen w-60 m-8">
-            <div className="bg-gradient-to-t w-full from-blue-300 to-blue-200 rounded-xl p-4 h-fit">
+          <div className="h-auto w-[90%] md:w-80 mx-auto m-4 md:m-8 z-10">
+            <div className="bg-slate-200 border-b-8 border-b-indigo-400 w-full rounded-xl p-4 py-16 h-fit">
               <ul className="ml-2">
-                <li className="pb-2">a dev and artist based in California.</li>
-                <li className="pb-2">
+                <li className="p-2">I'm a dev and artist based in CA.</li>
+                <li className="p-2">
                   I recently graduated from UCI with a BS in Computer Science
                   and am looking for new opportunities.
                 </li>
-                <li className="pb-2">
-                  I mostly use JavaScript and Python for full-stack web
+                <li className="p-2">
+                  I mostly use JavaScript and Python for web
                   development, but I'm always willing to learn new languages and
                   tech.
                 </li>
-                <li className="pb-2">
+                <li className="p-2">
                   Feel free to check out my projects down below or contact me on
                   my socials.
                 </li>
@@ -73,11 +82,11 @@ const App = () => {
           </div>
         </div>
 
-        <div className="flex justify-between w-full h-auto">
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 m-8 sticky top-72 border-b-4 border-blue-600">
+        <div id='projects' className="flex flex-col md:flex-row justify-between w-full h-auto">
+          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center md:m-8 sticky top-72 border-b-4 border-blue-600">
             <h2 className="text-lg">Projects</h2>
           </div>
-          <div className="h-full w-96">
+          <div className="h-full w-[90%] md:w-80 mx-auto md:m-8 z-10">
             <Project
               title={"Cooldown"}
               link={"usecooldown.com"}
@@ -120,17 +129,18 @@ const App = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-col h-auto">
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 m-8 sticky top-72 border-b-4 border-blue-600 z-10">
+        <div id='experience' className="w-full flex flex-col h-auto">
+          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto md:m-8 sticky top-72 border-b-4 border-blue-600 z-10">
             <h2 className="text-lg">Experience</h2>
           </div>
-          <div className="flex justify-between w-full h-auto">
-            <div className="w-60 flex mx-8 my-2 justify-end sticky top-[22.5rem]">
-              <div className="bg-blue-600 w-fit p-4 rounded-xl ">
+
+          <div className="flex flex-col md:flex-row justify-between w-full h-auto">
+            <div className="w-60 flex mx-auto my-2 justify-center md:justify-end sticky top-[22.5rem] z-10 md:z-0">
+              <div className="bg-blue-600 w-fit p-4 rounded-xl">
                 <h2 className="">2022</h2>
               </div>
             </div>
-            <div className="h-full w-96">
+            <div className="h-full w-[90%] md:w-80 mx-auto md:m-8 z-20">
               <Experience
                 title={"B.S in Computer Science"}
                 company={"UCI"}
@@ -154,13 +164,14 @@ const App = () => {
               ></Experience>
             </div>
           </div>
-          <div className="flex justify-between w-full h-auto">
-            <div className="w-60 flex m-8 justify-end sticky top-[22.5rem]">
+
+          <div className="flex flex-col items-center md:flex-row justify-between w-full h-auto">
+          <div className="w-60 flex mx-auto my-2 justify-center md:justify-end sticky top-[22.5rem] z-10 md:z-1">
               <div className="bg-blue-600 w-fit p-4 rounded-xl ">
-                <h2 className="text-md">2021</h2>
+                <h2 className="">2021</h2>
               </div>
             </div>
-            <div className="h-full w-96">
+            <div className="h-full w-[90%] md:w-80 z-20">
               <Experience
                 title={"Team Member"}
                 company={"Chipotle"}
@@ -182,12 +193,12 @@ const App = () => {
           </div>
         </div>
 
-        <div className="flex justify-between w-full h-auto">
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 m-8 sticky top-72 border-b-4 border-blue-600">
-            <h2 className="text-lg ">Contact</h2>
+        <div id='contact' className="flex flex-col md:flex-row justify-between w-full h-screen">
+          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 text-center mx-auto md:m-8 sticky top-72 border-b-4 border-blue-600">
+            <h2  className="text-lg ">Contact</h2>
           </div>
-          <div className="h-screen w-96">
-            <div className="bg-gradient-to-t from-blue-300 to-blue-200 rounded-xl p-4 m-8 h-fit">
+          <div className="h-screen w-[90%] mx-auto md:w-80 flex justify-center items-center z-10">
+            <div className="bg-slate-200 border-b-8 border-b-indigo-400 rounded-xl p-4 h-fit">
               <p>
                 LinkedIn or Email are the most reliable ways to contact me. I
                 would add other socials but I don't use them
