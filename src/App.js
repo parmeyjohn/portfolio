@@ -56,11 +56,11 @@ const App = () => {
           </div>
         </div>
 
-        <div id='about' className="flex flex-col md:flex-row justify-between w-full h-auto my-20">
-          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4  my-8 mx-auto md:m-8 sticky border-b-4 top-72 border-blue-600">
+        <div id='about' className="flex flex-col md:flex-row justify-between w-full h-auto my-24">
+          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600">
             <h2 className="text-lg ">About</h2>
           </div>
-          <div className="h-auto w-[90%] md:w-80 mx-auto m-4 md:m-8 z-10">
+          <div className="h-auto w-[90%] md:w-80 mx-auto z-10">
             <div className="bg-slate-200 border-b-8 border-b-indigo-400 w-full rounded-xl p-4 py-16 h-fit">
               <ul className="ml-2">
                 <li className="p-2">I'm a dev and artist based in CA.</li>
@@ -83,10 +83,11 @@ const App = () => {
         </div>
 
         <div id='projects' className="flex flex-col md:flex-row justify-between w-full h-auto">
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center md:m-8 sticky top-72 border-b-4 border-blue-600">
+          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600">
             <h2 className="text-lg">Projects</h2>
           </div>
-          <div className="h-full w-[90%] md:w-80 mx-auto md:m-8 z-10">
+          <div className="h-full w-[90%] md:w-80 mx-auto z-10">
+            <div className="mb-16">
             <Project
               title={"Cooldown"}
               link={"usecooldown.com"}
@@ -108,7 +109,7 @@ const App = () => {
                 "Jest",
               ]}
             ></Project>
-
+            </div>
             <Project
               title={"Fullstack E-commerce Site"}
               bullets={[
@@ -129,18 +130,19 @@ const App = () => {
           </div>
         </div>
 
-        <div id='experience' className="w-full flex flex-col h-auto">
+        <div id='experience' className="w-full flex flex-col h-auto my-24">
           <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto md:m-8 sticky top-72 border-b-4 border-blue-600 z-10">
             <h2 className="text-lg">Experience</h2>
           </div>
 
           <div className="flex flex-col md:flex-row justify-between w-full h-auto">
-            <div className="w-60 flex mx-auto my-2 justify-center md:justify-end sticky top-[22.5rem] z-10 md:z-0">
+            <div className="w-60 flex mx-auto justify-center md:justify-end sticky top-[22.5rem] z-10 md:z-0">
               <div className="bg-blue-600 w-fit p-4 rounded-xl">
                 <h2 className="">2022</h2>
               </div>
             </div>
-            <div className="h-full w-[90%] md:w-80 mx-auto md:m-8 z-20">
+            <div className="h-full w-[90%] md:w-80 mx-auto z-20 mb-24">
+              <div className="mb-16">
               <Experience
                 title={"B.S in Computer Science"}
                 company={"UCI"}
@@ -153,7 +155,7 @@ const App = () => {
                   "Machine Learning and Data Mining",
                 ]}
               ></Experience>
-
+              </div>
               <Experience
                 title={"Software Engineer Capstone"}
                 company={"Knowde"}
@@ -166,12 +168,13 @@ const App = () => {
           </div>
 
           <div className="flex flex-col items-center md:flex-row justify-between w-full h-auto">
-          <div className="w-60 flex mx-auto my-2 justify-center md:justify-end sticky top-[22.5rem] z-10 md:z-1">
+          <div className="w-60 flex mx-auto my-2 justify-center md:justify-end sticky top-[22.5rem] z-10 md:z-0">
               <div className="bg-blue-600 w-fit p-4 rounded-xl ">
                 <h2 className="">2021</h2>
               </div>
             </div>
-            <div className="h-full w-[90%] md:w-80 z-20">
+            <div className="h-full w-[90%] md:w-80 mx-auto z-20">
+              <div className="mb-16">
               <Experience
                 title={"Team Member"}
                 company={"Chipotle"}
@@ -180,7 +183,7 @@ const App = () => {
                   "Provided exemplary service to over 150 customers per shift",
                 ]}
               ></Experience>
-
+              </div>
               <Experience
                 title={"Sales Associate"}
                 company={"Vans"}
@@ -194,10 +197,10 @@ const App = () => {
         </div>
 
         <div id='contact' className="flex flex-col md:flex-row justify-between w-full h-screen">
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 text-center mx-auto md:m-8 sticky top-72 border-b-4 border-blue-600">
+          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 text-center mx-auto sticky top-72 border-b-4 border-blue-600">
             <h2  className="text-lg ">Contact</h2>
           </div>
-          <div className="h-screen w-[90%] mx-auto md:w-80 flex justify-center items-center z-10">
+          <div className="h-screen w-[90%] mx-auto md:w-80 flex z-10">
             <div className="bg-slate-200 border-b-8 border-b-indigo-400 rounded-xl p-4 h-fit">
               <p>
                 LinkedIn or Email are the most reliable ways to contact me. I
