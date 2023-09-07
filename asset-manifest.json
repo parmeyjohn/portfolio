@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.1bb0709a.css",
-    "main.js": "/portfolio/static/js/main.a5913b81.js",
-    "static/js/787.1b46e2cd.chunk.js": "/portfolio/static/js/787.1b46e2cd.chunk.js",
-    "static/media/FOT-Rodin Pro DB.otf": "/portfolio/static/media/FOT-Rodin Pro DB.b3ad527ca6afebd7b478.otf",
-    "static/media/rough_portrait_01.png": "/portfolio/static/media/rough_portrait_01.8ad9656fbef8215bb329.png",
-    "static/media/boxer.png": "/portfolio/static/media/boxer.edf75eb2548b39bc7b09.png",
-    "static/media/jeanieImage.PNG": "/portfolio/static/media/jeanieImage.6f2f7cbad800b8f6605b.PNG",
-    "static/media/cooldownImage.PNG": "/portfolio/static/media/cooldownImage.c928eea7a88bd2220f43.PNG",
-    "static/media/portrait.JPG": "/portfolio/static/media/portrait.d7968dc80393343e7c35.JPG",
-    "static/media/editedProfile.png": "/portfolio/static/media/editedProfile.ce259e8adc3fa1a20952.png",
-    "static/media/johnCuvielloResume.pdf": "/portfolio/static/media/johnCuvielloResume.ebd0ad28e76dceff67dd.pdf",
-    "static/media/bappleImage.PNG": "/portfolio/static/media/bappleImage.72e519317eb6a16f08cc.PNG",
-    "static/media/wave.svg": "/portfolio/static/media/wave.481bbf8cd968414ca76d.svg",
-    "static/media/wave2.svg": "/portfolio/static/media/wave2.0fbd33b5f5e7ed247252.svg",
-    "index.html": "/portfolio/index.html",
-    "main.1bb0709a.css.map": "/portfolio/static/css/main.1bb0709a.css.map",
-    "main.a5913b81.js.map": "/portfolio/static/js/main.a5913b81.js.map",
-    "787.1b46e2cd.chunk.js.map": "/portfolio/static/js/787.1b46e2cd.chunk.js.map"
+    "main.css": "/static/css/main.7d8fd0f8.css",
+    "main.js": "/static/js/main.ddd9d62e.js",
+    "static/js/787.1b46e2cd.chunk.js": "/static/js/787.1b46e2cd.chunk.js",
+    "static/media/FOT-Rodin Pro DB.otf": "/static/media/FOT-Rodin Pro DB.b3ad527ca6afebd7b478.otf",
+    "static/media/rough_portrait_01.png": "/static/media/rough_portrait_01.8ad9656fbef8215bb329.png",
+    "static/media/boxer.png": "/static/media/boxer.edf75eb2548b39bc7b09.png",
+    "static/media/jeanieImage.PNG": "/static/media/jeanieImage.6f2f7cbad800b8f6605b.PNG",
+    "static/media/cooldownImage.PNG": "/static/media/cooldownImage.c928eea7a88bd2220f43.PNG",
+    "static/media/portrait.JPG": "/static/media/portrait.d7968dc80393343e7c35.JPG",
+    "static/media/editedProfile.png": "/static/media/editedProfile.ce259e8adc3fa1a20952.png",
+    "static/media/johnCuvielloResume.pdf": "/static/media/johnCuvielloResume.ebd0ad28e76dceff67dd.pdf",
+    "static/media/bappleImage.PNG": "/static/media/bappleImage.72e519317eb6a16f08cc.PNG",
+    "static/media/wave.svg": "/static/media/wave.481bbf8cd968414ca76d.svg",
+    "static/media/wave2.svg": "/static/media/wave2.0fbd33b5f5e7ed247252.svg",
+    "index.html": "/index.html",
+    "main.7d8fd0f8.css.map": "/static/css/main.7d8fd0f8.css.map",
+    "main.ddd9d62e.js.map": "/static/js/main.ddd9d62e.js.map",
+    "787.1b46e2cd.chunk.js.map": "/static/js/787.1b46e2cd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1bb0709a.css",
-    "static/js/main.a5913b81.js"
+    "static/css/main.7d8fd0f8.css",
+    "static/js/main.ddd9d62e.js"
   ]
 }
