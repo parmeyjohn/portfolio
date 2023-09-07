@@ -10,7 +10,7 @@ const Project = ({ title, github, link, media, bullets, desc, tags, image, subti
       <img
         src={require(`../images/${image}`)}
         alt={`${title} landing page`}
-        className="rounded-xl border border-indigo-500"
+        className="rounded-xl border-2 border-blue-700 hover:border-blue-500 transition-all duration-75"
       ></img>
       <div className="w-full flex justify-between items-center pt-3">
         <div className="">
@@ -22,14 +22,14 @@ const Project = ({ title, github, link, media, bullets, desc, tags, image, subti
           {github &&
           <a
             href={github}
-            className="point-on front px-2 h-fit text-blue-700 hover:text-indigo-400 transition-all duration-75"
+            className="point-on front px-2 h-fit border text-slate-900 hover:text-slate-700 transition-all ease-in-out duration-75"
           >
             <FaGithub size="1.8rem" />
           </a> }
           {link && 
           <a
                 href={link}
-                className="point-on front px-2 h-fit text-blue-700 hover:text-indigo-400"
+                className="point-on front px-2 h-fit text-slate-900 text-shadow-xl hover:text-blue-800"
               >
                 <FaLink size="1.8rem" />
               </a>
