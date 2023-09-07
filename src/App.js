@@ -41,8 +41,8 @@ const App = () => {
       </nav>
 
       <div className="w-full h-full max-w-2xl mx-auto mb-16">
-        <div className="bg-slate-200 border-b-8 border-b-indigo-400 rounded-xl h-auto py-16 w-[90%] mx-auto p-4 z-20 flex flex-col md:flex-row items-center justify-center">
-          <div className="flex justify-center items-center md:mr-24">
+        <div className="bg-slate-200 border-b-8 border-b-blue-400 rounded-xl h-auto py-16 w-[90%] md:w-full mx-auto z-20 flex flex-col md:flex-row items-center justify-center">
+          <div className="flex justify-center items-center md:mr-36">
             <img
               src={require("./images/editedProfile.png")}
               alt="Portrait of John Cuviello"
@@ -51,29 +51,33 @@ const App = () => {
           </div>
           <div className="h-fit text-center my-4">
             <p className="text-xs mb-2">Hi, I'm</p>
-            <p className="text-3xl font-medium text-blue-900 pb-2">
+            <p className="text-3xl font-medium text-blue-700 pb-2">
               John Cuviello
             </p>
-            <p className="text-center text-blue-600">Web Developer</p>
+            <p className="text-center text-slate-600">Web Developer</p>
 
             <div className="flex justify-center w-full items-center my-4 h-fit">
-              <button className="rounded-full border-b-2 mr-4 border border-emerald-600 -hue-rotate-30  hover:bg-green-500 hover:-hue-rotate-30 transition-all duration-75 p-2 px-4">
-                Resume
-              </button>
-              <button className="rounded-full border border-b-2 border-emerald-800 bg-green-500 -hue-rotate-30 hover:bg-emerald-600 transition-all duration-75 p-2 px-4">
-                Contact
-              </button>
+              <a download='johnCuvielloResume' href={require("./johnCuvielloResume.pdf")}>
+                <button  className="rounded-full border-b-2 mr-4 border border-emerald-600 -hue-rotate-30  hover:bg-green-500 hover:-hue-rotate-30 transition-all duration-75 p-2 px-4">
+                  Resume
+                </button>
+              </a>
+              <a href="#contact">
+                <button className="rounded-full border border-b-2 border-emerald-800 bg-green-500 -hue-rotate-30 hover:bg-emerald-600 transition-all duration-75 p-2 px-4">
+                  Contact
+                </button>
+              </a>
             </div>
-            <div className="flex justify-center m-2 h-fit">
+            <div className="flex justify-center m-2 h-fit ">
               <a
                 href="https://www.linkedin.com/in/johncuv/"
-                className="point-on front px-2 h-fit mr-4"
+                className="point-on front px-2 h-fit mr-4 hover:text-blue-700 transition-all  ease-in-out duration-100"
               >
-                <FaLinkedin href="google.com" size="2rem" />
+                <FaLinkedin className="" href="google.com" size="2rem" />
               </a>
               <a
                 href="https://github.com/parmeyjohn"
-                className="point-on front px-2 h-fit"
+                className="point-on front px-2 h-fit hover:text-blue-700 transition-all  ease-in-out duration-100"
               >
                 <FaGithub size="2rem" />
               </a>
@@ -85,11 +89,11 @@ const App = () => {
           id="about"
           className="flex flex-col md:flex-row justify-between w-full h-auto my-24"
         >
-          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600">
+          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600 mb-8 md:mb-0">
             <h2 className="text-lg ">About</h2>
           </div>
           <div className="h-auto w-[90%] md:w-80 mx-auto z-10">
-            <div className="bg-slate-200 border-b-8 border-b-indigo-400 w-full p-4 rounded-xl h-fit">
+            <div className="bg-slate-200 border-b-8 border-b-blue-400 w-full p-4 rounded-xl h-fit">
               <ul className="">
                 <li className="p-2">I'm a dev and artist based in CA.</li>
                 <li className="p-2">
@@ -97,8 +101,8 @@ const App = () => {
                   and am looking for new opportunities.
                 </li>
                 <li className="p-2">
-                  Recently I've been focusing on web development with React and JavaScript,
-                  but I'm always willing to learn new languages and tech.
+                  I've been focusing on web development with React and JavaScript,
+                  but I love learning new languages and tech.
                 </li>
                 <li className="p-2">
                   Feel free to check out my projects down below or contact me on
@@ -113,7 +117,7 @@ const App = () => {
           id="projects"
           className="flex flex-col md:flex-row justify-between w-full h-auto mb-24"
         >
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600">
+          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600 mb-8 md:mb-0">
             <h2 className="text-lg">Projects</h2>
           </div>
           <div className="h-full w-[90%] md:w-80 mx-auto z-10">
@@ -127,8 +131,8 @@ const App = () => {
                 desc={
                   "Web app for tracking and reflecting on gaming sessions." +
                   " Create personalized journals grouped by genre or title." +
-                  " Format entries with rich-text just like your favorite editor." +
-                  " Sort entries by title or date to track when and where you played your favorite game."
+                  " Format entries with rich-text like popular editing tools." +
+                  " Sort entries by title or date to track when you played your favorite game."
                 }
                 tags={[
                   "React",
@@ -149,10 +153,11 @@ const App = () => {
               image={'jeanieImage.PNG'}
               github={"https://github.com/parmeyjohn/ecommerce"}
               desc={
-                  "Web app for inital version of web store." +
+                  "Full-stack web app prototype for future ecommerce project." +
                   " Fully functional cart and checkout with Stripe API." +
-                  " Search ." +
-                  " Sort entries by title or date to track when and where you played your favorite game."
+                  " Search, sort, and filter options for hundreds of items." +
+                  " Optimized SEO with server side rendering using NextJS." +
+                  " Cloud auth and storage using Firebase."
                 }
               bullets={[
                 "Crafted an appealing front-end to navigate, filter, and sort products with React and Tailwind CSS",
@@ -175,7 +180,7 @@ const App = () => {
               subtitle={"Search Engine"}
               image={'bappleImage.PNG'}
               desc={
-                  "Created to crawl and index tens of thousands of UCI web pages as a team of four." +
+                  "Web crawler created to index tens of thousands of UCI web pages." +
                   " Indexed pages based on term frequency and html tags." +
                   " Optimized queries to process in under 300 ms."
                 }
@@ -195,7 +200,7 @@ const App = () => {
           id="experience"
           className="flex flex-col md:flex-row justify-between w-full h-auto"
         >
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600">
+          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600 mb-8 md:mb-0">
             <h2 className="text-lg">Experience</h2>
           </div>
           <div className="h-full w-[90%] md:w-80 mx-auto z-10">
@@ -220,7 +225,7 @@ const App = () => {
                 desc={
                   "Developed tool using React and Flask to automate data extraction from PDFs." +
                   " Utilized numPy and pandas to clean and format tabular data." +
-                  " Automated data from 200+ documents weekly and reduced processing time by 83%" +
+                  " Automated parsing from 200+ documents weekly and reduced processing time by 83%" +
                   " Tracked progress using Agile development with Jira, and regression testing."
                 }
               ></Experience>
@@ -250,17 +255,17 @@ const App = () => {
           id="contact"
           className="flex flex-col md:flex-row justify-between w-full h-auto my-24"
         >
-          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600">
+          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600 mb-8 md:mb-0">
             <h2 className="text-lg ">Contact</h2>
           </div>
-          <div className="h-auto mb-48 w-[90%] md:w-80 mx-auto z-10">
-            <div className="bg-slate-200 border-b-8 border-b-indigo-400 w-full p-6 rounded-xl h-fit">
-              
-              <a className="flex items-center" href = {`mailto: ${email}`}>
+          <div className="h-auto mb-72 w-[90%] md:w-80 mx-auto z-10">
+            <div className="bg-slate-200 border-b-8 border-b-blue-400 w-full p-6 rounded-xl h-fit">
+              <p className="text-lg text-blue-700">Links:</p>
+              <a className="my-2 flex items-center hover:text-blue-700 transition-all  ease-in-out duration-100 hover:underline text-lg" href = {`mailto: ${email}`}>
                 <FaEnvelope></FaEnvelope>
                 <p className="ml-2">{email}</p>
               </a>
-              <a className="flex items-center"  href = {"linkedin.com"}>
+              <a className="my-2 text-lg flex items-center hover:text-blue-700 transition-all  ease-in-out duration-100 hover:underline"  href = {"https://www.linkedin.com/in/johncuv/"}>
                 <FaLinkedin></FaLinkedin>
                 <p className="ml-2">johncuv</p>
               </a>

@@ -6,7 +6,7 @@ const Project = ({ title, github, link, media, bullets, desc, tags, image, subti
 
   
   return (
-    <div className="bg-slate-200 border-b-8 border-b-indigo-400 rounded-xl p-6 h-fit z-10">
+    <div className="bg-slate-200 border-b-8 border-b-blue-400 rounded-xl p-6 h-fit z-10">
       <img
         src={require(`../images/${image}`)}
         alt={`${title} landing page`}
@@ -22,14 +22,14 @@ const Project = ({ title, github, link, media, bullets, desc, tags, image, subti
           {github &&
           <a
             href={github}
-            className="point-on front px-2 h-fit border text-slate-900 hover:text-slate-700 transition-all ease-in-out duration-75"
+            className="point-on front px-2 h-fit border text-slate-900 hover:text-blue-700 transition-all  ease-in-out duration-100"
           >
             <FaGithub size="1.8rem" />
           </a> }
           {link && 
           <a
                 href={link}
-                className="point-on front px-2 h-fit text-slate-900 text-shadow-xl hover:text-blue-800"
+                className="point-on front px-2 h-fit text-slate-900 hover:text-blue-700 transition-all  ease-in-out duration-100"
               >
                 <FaLink size="1.8rem" />
               </a>
