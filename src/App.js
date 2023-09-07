@@ -85,12 +85,12 @@ const App = () => {
           id="about"
           className="flex flex-col md:flex-row justify-between w-full h-auto my-24"
         >
-          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600">
+          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-2 mx-auto sticky border-b-4 top-72 border-blue-600">
             <h2 className="text-lg ">About</h2>
           </div>
           <div className="h-auto w-[90%] md:w-80 mx-auto z-10">
-            <div className="bg-slate-200 border-b-8 border-b-indigo-400 w-full rounded-xl p-4 h-fit">
-              <ul className="ml-2">
+            <div className="bg-slate-200 border-b-8 border-b-indigo-400 w-full p-4 rounded-xl h-fit">
+              <ul className="">
                 <li className="p-2">I'm a dev and artist based in CA.</li>
                 <li className="p-2">
                   I recently graduated from UCI with a BS in Computer Science
@@ -114,7 +114,7 @@ const App = () => {
 
         <div
           id="projects"
-          className="flex flex-col md:flex-row justify-between w-full h-auto pb-24"
+          className="flex flex-col md:flex-row justify-between w-full h-auto mb-24"
         >
           <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600">
             <h2 className="text-lg">Projects</h2>
@@ -123,14 +123,16 @@ const App = () => {
             <div className="mb-16">
               <Project
                 title={"Cooldown"}
-                link={"usecooldown.com"}
-                bullets={[
-                  "Constructed a responsive front-end to display journal entries using React and Tailwind CSS",
-                  "Developed a back-end REST API with Node, Express, and MongoDB Atlas",
-                  "Authenticated users via JSON web tokens, password hashing, and protected React Router client-side routes",
-                  "Consumed external API to populate images and titles based on user search results",
-                  "Applied end-to-end, integration, and unit testing with Cypress and Jest",
-                ]}
+                subtitle={"Full-stack Journal App"}
+                link={"https://usecooldown.com"}
+                github={"https://github.com/parmeyjohn/cooldown"}
+                image={"cooldownImage.PNG"}
+                desc={
+                  "Web app for tracking and reflecting on gaming sessions." +
+                  " Create personalized journals grouped by genre or title." +
+                  " Format entries with rich-text just like your favorite editor." +
+                  " Sort entries by title or date to track when and where you played your favorite game."
+                }
                 tags={[
                   "React",
                   "JavaScript",
@@ -143,8 +145,18 @@ const App = () => {
                 ]}
               ></Project>
             </div>
+            <div className="mb-16">
             <Project
-              title={"Fullstack E-commerce Site"}
+              title={"Jeanie"}
+              subtitle={"E-commerce App"}
+              image={'jeanieImage.PNG'}
+              github={"https://github.com/parmeyjohn/ecommerce"}
+              desc={
+                  "Web app for inital version of web store." +
+                  " Fully functional cart and checkout with Stripe API." +
+                  " Search ." +
+                  " Sort entries by title or date to track when and where you played your favorite game."
+                }
               bullets={[
                 "Crafted an appealing front-end to navigate, filter, and sort products with React and Tailwind CSS",
                 "Utilized NextJS for data fetching, routing, and server-side rendering for improved performance and SEO",
@@ -156,9 +168,28 @@ const App = () => {
                 "JavaScript",
                 "TailwindCSS",
                 "NextJS",
-                "GCP",
+                "Firebase",
                 "StripeJS ",
               ]}
+            ></Project>
+            </div>
+            <Project
+              title={"Bapple"}
+              subtitle={"Search Engine"}
+              image={'bappleImage.PNG'}
+              desc={
+                  "Created to crawl and index tens of thousands of UCI web pages as a team of four." +
+                  " Indexed pages based on term frequency and html tags." +
+                  " Optimized queries to process in under 300 ms."
+                }
+              tags={[
+                "Python",
+                "Flask",
+                "JavaScript",
+                "HTML",
+                "CSS"
+              ]}
+              link={"https://dennishc.github.io/bapple.html"}
             ></Project>
           </div>
         </div>

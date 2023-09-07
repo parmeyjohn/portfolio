@@ -1,6 +1,7 @@
 const Experience = ({ title, company, subtitle, bullets }) => {
   return (
     <div className="bg-slate-200 border-b-8 border-b-indigo-400 rounded-xl p-8 h-fit">
+      
       <h1 className="text-lg text-blue-700 font-semibold">{title} </h1>
       <h2 className="mb-2">{company}</h2>
       <ul className="">
