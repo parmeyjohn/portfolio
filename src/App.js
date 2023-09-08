@@ -89,10 +89,10 @@ const App = () => {
           id="about"
           className="flex flex-col md:flex-row justify-between w-full h-auto my-24"
         >
-          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600 mb-8 md:mb-0 z-index-fix">
+          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600 mb-8 md:mb-0">
             <h2 className="text-lg ">About</h2>
           </div>
-          <div className="h-auto w-[90%] md:w-80 mx-auto z-10">
+          <div className="h-auto w-[90%] md:w-80 mx-auto z-10  z-index-fix">
             <div className="bg-slate-200 border-b-8 border-b-blue-400 w-full p-4 rounded-xl h-fit">
               <ul className="">
                 <li className="p-2">I'm a dev and artist based in CA.</li>
@@ -117,10 +117,10 @@ const App = () => {
           id="projects"
           className="flex flex-col md:flex-row justify-between w-full h-auto mb-24"
         >
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600 mb-8 md:mb-0 z-index-fix">
+          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600 mb-8 md:mb-0">
             <h2 className="text-lg">Projects</h2>
           </div>
-          <div className="h-full w-[90%] md:w-80 mx-auto z-10">
+          <div className="h-full w-[90%] md:w-80 mx-auto z-10  z-index-fix">
             <div className="mb-16">
               <Project
                 title={"Cooldown"}
@@ -200,10 +200,10 @@ const App = () => {
           id="experience"
           className="flex flex-col md:flex-row justify-between w-full h-auto"
         >
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600 mb-8 md:mb-0 z-index-fix">
+          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600 mb-8 md:mb-0">
             <h2 className="text-lg">Experience</h2>
           </div>
-          <div className="h-full w-[90%] md:w-80 mx-auto z-10">
+          <div className="h-full w-[90%] md:w-80 mx-auto z-10  z-index-fix">
             <div className="mb-16">
               <Experience
                 title={"BS in Computer Science"}
@@ -255,10 +255,10 @@ const App = () => {
           id="contact"
           className="flex flex-col md:flex-row justify-between w-full h-auto my-24"
         >
-          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600 mb-8 md:mb-0 z-index-fix">
+          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600 mb-8 md:mb-0">
             <h2 className="text-lg ">Contact</h2>
           </div>
-          <div className="h-auto mb-72 w-[90%] md:w-80 mx-auto z-10">
+          <div className="h-auto mb-72 w-[90%] md:w-80 mx-auto z-10  z-index-fix">
             <div className="bg-slate-200 border-b-8 border-b-blue-400 w-full p-6 rounded-xl h-fit">
               <p className="text-lg text-blue-700">Links:</p>
               <a className="my-2 flex items-center hover:text-blue-700 transition-all  ease-in-out duration-100 hover:underline text-lg" href = {`mailto: ${email}`}>
