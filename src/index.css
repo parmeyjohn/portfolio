@@ -101,7 +101,9 @@ p {
   color: var(--dark-green);
 }
 
-
+.z-index-fix {
+  -webkit-transform: translate3d(0,0,0);
+}
 
 .face {
   width: 100%;

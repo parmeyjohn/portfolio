@@ -51,10 +51,10 @@ const App = () => {
           </div>
           <div className="h-fit text-center my-4">
             <p className="text-xs mb-2">Hi, I'm</p>
-            <p className="text-3xl font-medium text-blue-700 pb-2">
+            <p className="text-3xl font-medium text-blue-700">
               John Cuviello
             </p>
-            <p className="text-center text-slate-600">Web Developer</p>
+            <p className="text-center text-slate-600 my-2">Web Developer</p>
 
             <div className="flex justify-center w-full items-center my-4 h-fit">
               <a download='johnCuvielloResume' href={require("./johnCuvielloResume.pdf")}>
@@ -68,7 +68,7 @@ const App = () => {
                 </button>
               </a>
             </div>
-            <div className="flex justify-center m-2 h-fit ">
+            <div className="flex justify-center my-4 h-fit ">
               <a
                 href="https://www.linkedin.com/in/johncuv/"
                 className="point-on front px-2 h-fit mr-4 hover:text-blue-700 transition-all  ease-in-out duration-100"
@@ -89,7 +89,7 @@ const App = () => {
           id="about"
           className="flex flex-col md:flex-row justify-between w-full h-auto my-24"
         >
-          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600 mb-8 md:mb-0">
+          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600 mb-8 md:mb-0 z-index-fix">
             <h2 className="text-lg ">About</h2>
           </div>
           <div className="h-auto w-[90%] md:w-80 mx-auto z-10">
@@ -117,7 +117,7 @@ const App = () => {
           id="projects"
           className="flex flex-col md:flex-row justify-between w-full h-auto mb-24"
         >
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600 mb-8 md:mb-0">
+          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600 mb-8 md:mb-0 z-index-fix">
             <h2 className="text-lg">Projects</h2>
           </div>
           <div className="h-full w-[90%] md:w-80 mx-auto z-10">
@@ -200,7 +200,7 @@ const App = () => {
           id="experience"
           className="flex flex-col md:flex-row justify-between w-full h-auto"
         >
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600 mb-8 md:mb-0">
+          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600 mb-8 md:mb-0 z-index-fix">
             <h2 className="text-lg">Experience</h2>
           </div>
           <div className="h-full w-[90%] md:w-80 mx-auto z-10">
@@ -255,7 +255,7 @@ const App = () => {
           id="contact"
           className="flex flex-col md:flex-row justify-between w-full h-auto my-24"
         >
-          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600 mb-8 md:mb-0">
+          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600 mb-8 md:mb-0 z-index-fix">
             <h2 className="text-lg ">Contact</h2>
           </div>
           <div className="h-auto mb-72 w-[90%] md:w-80 mx-auto z-10">

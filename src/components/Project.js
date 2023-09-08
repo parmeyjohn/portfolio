@@ -40,7 +40,7 @@ const Project = ({ title, github, link, media, bullets, desc, tags, image, subti
       <p className="py-4 leading-relaxed">{desc}</p>
       <h4>Built with:</h4>
       <div className="flex flex-wrap">
-        {tags.map((t) => <Tag text={t}></Tag>)}
+        {tags.map((t, i) => <Tag key={i} text={t}></Tag>)}
       </div>    
     </div>
   );

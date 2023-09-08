@@ -8,8 +8,8 @@ const Experience = ({ title, company, subtitle, bullets, experience, desc }) => 
       
       {bullets && <ul className="list-disc">
         {subtitle && <h2 className="mb-1">{subtitle}</h2>}
-        {bullets.map((b) => (
-          <li className="ml-3 leading-relaxed">{b}</li>
+        {bullets.map((b, i) => (
+          <li key={i} className="ml-3 leading-relaxed">{b}</li>
         ))}
       </ul> }
     </div>
