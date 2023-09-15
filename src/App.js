@@ -1,38 +1,40 @@
-import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { Experience } from "./components/Experience";
 import { Project } from "./components/Project";
 import { useState } from "react";
 
 const App = () => {
-  const [email, setEmail] = useState('johncuviello99@gmail.com')
-  
+  const [email, setEmail] = useState("johncuviello99@gmail.com");
+
   return (
-    <div className="h-auto w-full w-2xl bg-gradient-to-b from-indigo-950 to-slate-950">
-      <nav className=" md:flex text-indigo-100 text-lg sticky h-20 w-full max-w-2xl p-8 mx-auto flex justify-between items-center">
-        <p className="whitespace-nowrap p-1 text-white my-auto ">John Cuviello</p>
-        <div className="flex justify-end items-center hidden md:block">
+    <div className="w-2xl h-auto w-full bg-gradient-to-b from-indigo-950 to-slate-950">
+      <nav className=" sticky mx-auto flex h-20 w-full max-w-2xl items-center justify-between p-8 text-lg text-indigo-100 md:flex">
+        <p className="my-auto whitespace-nowrap p-1 text-white ">
+          John Cuviello
+        </p>
+        <div className="flex hidden items-center justify-end md:block">
           <div className="flex">
             <a
               href="#about"
-              className="p-2 hover:underline text-blue-100 hover:text-white transition-all"
+              className="p-2 text-blue-100 transition-all hover:text-white hover:underline"
             >
               About
             </a>
             <a
               href="#projects"
-              className="p-2 hover:underline text-blue-100 hover:text-white transition-all"
+              className="p-2 text-blue-100 transition-all hover:text-white hover:underline"
             >
               Projects
             </a>
             <a
               href="#experience"
-              className="p-2 hover:underline text-blue-100 hover:text-white transition-all"
+              className="p-2 text-blue-100 transition-all hover:text-white hover:underline"
             >
               Experience
             </a>
             <a
               href="#contact"
-              className="p-2 hover:underline text-blue-100 hover:text-white transition-all "
+              className="p-2 text-blue-100 transition-all hover:text-white hover:underline "
             >
               Contact
             </a>
@@ -40,44 +42,45 @@ const App = () => {
         </div>
       </nav>
 
-      <div className="w-full h-full max-w-2xl mx-auto mb-16">
-        <div className="bg-slate-200 border-b-8 border-b-blue-400 rounded-xl h-auto py-16 w-[90%] md:w-full mx-auto z-20 flex flex-col md:flex-row items-center justify-center">
-          <div className="flex justify-center items-center md:mr-36">
+      <div className="mx-auto mb-16 h-full w-full max-w-2xl ">
+        <div className="z-20 mx-auto flex h-auto w-[90%] flex-col items-center justify-center rounded-xl border-b-8 border-b-blue-400 bg-slate-200 py-16 md:w-full md:flex-row">
+          <div className="flex items-center justify-center md:pr-36">
             <img
               src={require("./images/editedProfile.png")}
               alt="Portrait of John Cuviello"
-              className="hover:bg-emerald-600  border transition-all duration-100 ease-in-out bg-green-500 border border-emerald-800 rounded-full w-40 h-40 object-cover object-top -hue-rotate-30 mx-auto"
+              className="mx-auto h-40 w-40 rounded-full border border-emerald-800 bg-green-500 object-cover object-top -hue-rotate-30 transition-all duration-100 ease-in-out hover:bg-emerald-600"
             ></img>
           </div>
-          <div className="h-fit text-center my-4">
-            <p className="text-xs mb-2">Hi, I'm</p>
-            <p className="text-3xl font-medium text-blue-700">
-              John Cuviello
-            </p>
-            <p className="text-center text-slate-600 my-2">Web Developer</p>
+          <div className="my-4 h-fit text-center">
+            <p className="mb-2 text-xs">Hi, I'm</p>
+            <p className="text-3xl font-medium text-blue-700">John Cuviello</p>
+            <p className="my-2 text-center text-slate-600">Web Developer</p>
 
-            <div className="flex justify-center w-full items-center my-4 h-fit">
-              <a download='johnCuvielloResume' href={require("./johnCuvielloResume.pdf")}>
-                <button  className="rounded-full border-b-2 mr-4 border border-emerald-600 -hue-rotate-30  hover:bg-green-500 hover:-hue-rotate-30 transition-all duration-75 p-2 px-4">
+            <div className="my-4 flex h-fit w-full items-center justify-center">
+              <a
+                download="johnCuvielloResume"
+                href={require("./johnCuvielloResume.pdf")}
+              >
+                <button className="mr-4 rounded-full border border-b-2 border-emerald-600 p-2  px-4 -hue-rotate-30 transition-all duration-75 hover:bg-green-500 hover:-hue-rotate-30">
                   Resume
                 </button>
               </a>
               <a href="#contact">
-                <button className="rounded-full border border-b-2 border-emerald-800 bg-green-500 -hue-rotate-30 hover:bg-emerald-600 transition-all duration-75 p-2 px-4">
+                <button className="rounded-full border border-b-2 border-emerald-800 bg-green-500 p-2 px-4 -hue-rotate-30 transition-all duration-75 hover:bg-emerald-600">
                   Contact
                 </button>
               </a>
             </div>
-            <div className="flex justify-center my-4 h-fit ">
+            <div className="my-4 flex h-fit justify-center ">
               <a
                 href="https://www.linkedin.com/in/johncuv/"
-                className="point-on front px-2 h-fit mr-4 hover:text-blue-700 transition-all  ease-in-out duration-100"
+                className="point-on front mr-4 h-fit px-2 transition-all duration-100  ease-in-out hover:text-blue-700"
               >
                 <FaLinkedin className="" href="google.com" size="2rem" />
               </a>
               <a
                 href="https://github.com/parmeyjohn"
-                className="point-on front px-2 h-fit hover:text-blue-700 transition-all  ease-in-out duration-100"
+                className="point-on front h-fit px-2 transition-all duration-100  ease-in-out hover:text-blue-700"
               >
                 <FaGithub size="2rem" />
               </a>
@@ -87,13 +90,13 @@ const App = () => {
 
         <div
           id="about"
-          className="flex flex-col md:flex-row justify-between w-full h-auto my-24"
+          className="my-24 flex h-auto w-full flex-col items-center justify-between md:flex-row md:items-start"
         >
-          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600 mb-8 md:mb-0">
+          <div className="sticky top-72 mb-8 h-fit w-60 rounded-xl border-b-4 border-blue-600 bg-blue-300 p-4 text-center md:mb-0">
             <h2 className="text-lg ">About</h2>
           </div>
-          <div className="h-auto w-[90%] md:w-80 mx-auto z-10  z-index-fix">
-            <div className="bg-slate-200 border-b-8 border-b-blue-400 w-full p-4 rounded-xl h-fit">
+          <div className="z-index-fix z-10 h-auto w-[90%]  md:w-80">
+            <div className="h-fit w-full rounded-xl border-b-8 border-b-blue-400 bg-slate-200 p-4">
               <ul className="">
                 <li className="p-2">I'm a dev and artist based in CA.</li>
                 <li className="p-2">
@@ -101,8 +104,8 @@ const App = () => {
                   and am looking for new opportunities.
                 </li>
                 <li className="p-2">
-                  I've been focusing on web development with React and JavaScript,
-                  but I love learning new languages and tech.
+                  I've been focusing on web development with React and
+                  JavaScript, but I love learning new languages and tech.
                 </li>
                 <li className="p-2">
                   Feel free to check out my projects down below or contact me on
@@ -115,12 +118,12 @@ const App = () => {
 
         <div
           id="projects"
-          className="flex flex-col md:flex-row justify-between w-full h-auto mb-24"
+          className="mb-24 flex h-auto w-full flex-col items-center justify-between md:flex-row md:items-start"
         >
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600 mb-8 md:mb-0">
+          <div className="sticky top-72 mb-8 h-fit w-60 rounded-xl border-b-4 border-blue-600 bg-blue-300 p-4 text-center md:mb-0">
             <h2 className="text-lg">Projects</h2>
           </div>
-          <div className="h-full w-[90%] md:w-80 mx-auto z-10  z-index-fix">
+          <div className="z-index-fix z-10 h-full w-[90%]  md:w-80">
             <div className="mb-16">
               <Project
                 title={"Cooldown"}
@@ -147,50 +150,44 @@ const App = () => {
               ></Project>
             </div>
             <div className="mb-16">
-            <Project
-              title={"Jeanie"}
-              subtitle={"E-commerce App"}
-              image={'jeanieImage.PNG'}
-              github={"https://github.com/parmeyjohn/ecommerce"}
-              desc={
+              <Project
+                title={"Jeanie"}
+                subtitle={"E-commerce App"}
+                image={"jeanieImage.PNG"}
+                github={"https://github.com/parmeyjohn/ecommerce"}
+                desc={
                   "Full-stack web app prototype for future ecommerce project." +
                   " Fully functional cart and checkout with Stripe API." +
                   " Search, sort, and filter options for hundreds of items." +
                   " Optimized SEO with server side rendering using NextJS." +
                   " Cloud auth and storage using Firebase."
                 }
-              bullets={[
-                "Crafted an appealing front-end to navigate, filter, and sort products with React and Tailwind CSS",
-                "Utilized NextJS for data fetching, routing, and server-side rendering for improved performance and SEO",
-                "Stored data for 100+ products and images using Firestore and Firebase Cloud Storage",
-                "Processed user purchases and customer data securely using the Stripe API",
-              ]}
-              tags={[
-                "React",
-                "JavaScript",
-                "TailwindCSS",
-                "NextJS",
-                "Firebase",
-                "StripeJS ",
-              ]}
-            ></Project>
+                bullets={[
+                  "Crafted an appealing front-end to navigate, filter, and sort products with React and Tailwind CSS",
+                  "Utilized NextJS for data fetching, routing, and server-side rendering for improved performance and SEO",
+                  "Stored data for 100+ products and images using Firestore and Firebase Cloud Storage",
+                  "Processed user purchases and customer data securely using the Stripe API",
+                ]}
+                tags={[
+                  "React",
+                  "JavaScript",
+                  "TailwindCSS",
+                  "NextJS",
+                  "Firebase",
+                  "StripeJS ",
+                ]}
+              ></Project>
             </div>
             <Project
               title={"Bapple"}
               subtitle={"Search Engine"}
-              image={'bappleImage.PNG'}
+              image={"bappleImage.PNG"}
               desc={
-                  "Web crawler created to index tens of thousands of UCI web pages." +
-                  " Indexed pages based on term frequency and html tags." +
-                  " Optimized queries to process in under 300 ms."
-                }
-              tags={[
-                "Python",
-                "Flask",
-                "JavaScript",
-                "HTML",
-                "CSS"
-              ]}
+                "Web crawler created to index tens of thousands of UCI web pages." +
+                " Indexed pages based on term frequency and html tags." +
+                " Optimized queries to process in under 300 ms."
+              }
+              tags={["Python", "Flask", "JavaScript", "HTML", "CSS"]}
               link={"https://dennishc.github.io/bapple.html"}
             ></Project>
           </div>
@@ -198,12 +195,12 @@ const App = () => {
 
         <div
           id="experience"
-          className="flex flex-col md:flex-row justify-between w-full h-auto"
+          className="flex h-auto w-full flex-col items-center justify-between md:flex-row md:items-start"
         >
-          <div className="bg-blue-300 w-60 h-fit rounded-xl p-4 mx-auto text-center sticky top-72 border-b-4 border-blue-600 mb-8 md:mb-0">
+          <div className="sticky top-72 mb-8 h-fit w-60 rounded-xl border-b-4 border-blue-600 bg-blue-300 p-4 text-center md:mb-0">
             <h2 className="text-lg">Experience</h2>
           </div>
-          <div className="h-full w-[90%] md:w-80 mx-auto z-10  z-index-fix">
+          <div className="z-index-fix z-10 h-full w-[90%]  md:w-80">
             <div className="mb-16">
               <Experience
                 title={"BS in Computer Science"}
@@ -253,26 +250,31 @@ const App = () => {
 
         <div
           id="contact"
-          className="flex flex-col md:flex-row justify-between w-full h-auto my-24"
+          className="my-24 flex h-auto w-full flex-col items-center justify-between md:flex-row md:items-start"
         >
-          <div className="bg-blue-300 text-center w-60 h-fit rounded-xl p-4 mx-auto sticky border-b-4 top-72 border-blue-600 mb-8 md:mb-0">
+          <div className="sticky top-72 mb-8 h-fit w-60 rounded-xl border-b-4 border-blue-600 bg-blue-300 p-4 text-center md:mb-0">
             <h2 className="text-lg ">Contact</h2>
           </div>
-          <div className="h-auto mb-72 w-[90%] md:w-80 mx-auto z-10  z-index-fix">
-            <div className="bg-slate-200 border-b-8 border-b-blue-400 w-full p-6 rounded-xl h-fit">
+          <div className="z-index-fix z-10 mb-72 h-auto w-[90%]  md:w-80">
+            <div className="h-fit w-full rounded-xl border-b-8 border-b-blue-400 bg-slate-200 p-6">
               <p className="text-lg text-blue-700">Links:</p>
-              <a className="my-2 flex items-center hover:text-blue-700 transition-all  ease-in-out duration-100 hover:underline text-lg" href = {`mailto: ${email}`}>
+              <a
+                className="my-2 flex items-center text-lg transition-all  duration-100 ease-in-out hover:text-blue-700 hover:underline"
+                href={`mailto: ${email}`}
+              >
                 <FaEnvelope></FaEnvelope>
                 <p className="ml-2">{email}</p>
               </a>
-              <a className="my-2 text-lg flex items-center hover:text-blue-700 transition-all  ease-in-out duration-100 hover:underline"  href = {"https://www.linkedin.com/in/johncuv/"}>
+              <a
+                className="my-2 flex items-center text-lg transition-all duration-100  ease-in-out hover:text-blue-700 hover:underline"
+                href={"https://www.linkedin.com/in/johncuv/"}
+              >
                 <FaLinkedin></FaLinkedin>
                 <p className="ml-2">johncuv</p>
               </a>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );
