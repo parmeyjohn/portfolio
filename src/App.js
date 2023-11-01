@@ -44,29 +44,31 @@ const App = () => {
 
       <div className="mx-auto mb-16 h-full w-full max-w-2xl ">
         <div className="z-20 mx-auto flex h-auto w-[90%] flex-col items-center justify-center rounded-xl border-b-8 border-b-blue-400 bg-slate-200 py-16 md:w-full md:flex-row">
-          <div className="flex items-center justify-center md:pr-36">
+          <div className="flex w-full items-center justify-center md:pr-12">
             <img
               src={require("./images/editedProfile.png")}
               alt="Portrait of John Cuviello"
-              className="mx-auto h-40 w-40 rounded-full border border-emerald-800 bg-green-500 object-cover object-top -hue-rotate-30 transition-all duration-100 ease-in-out hover:bg-emerald-600"
+              className="mx-auto h-48 w-48 rounded-full border border-emerald-800 bg-green-500 object-cover object-top transition-all duration-100 ease-in-out hover:bg-emerald-600"
             ></img>
           </div>
-          <div className="my-4 h-fit text-center">
+          <div className="my-4 h-fit w-full text-center">
             <p className="mb-2 text-xs">Hi, I'm</p>
             <p className="text-3xl font-medium text-blue-700">John Cuviello</p>
-            <p className="my-2 text-center text-slate-600">Web Developer</p>
+            <p className="my-2 text-center text-slate-600">
+              Entry-level Software Engineer
+            </p>
 
             <div className="my-4 flex h-fit w-full items-center justify-center">
               <a
                 download="johnCuvielloResume"
                 href={require("./johnCuvielloResume.pdf")}
               >
-                <button className="mr-4 rounded-full border border-b-2 border-emerald-600 p-2  px-4 -hue-rotate-30 transition-all duration-75 hover:bg-green-500 hover:-hue-rotate-30">
+                <button className="mr-4 rounded-full border border-b-2 border-emerald-600 p-2  px-4 transition-all duration-75 hover:bg-green-500">
                   Resume
                 </button>
               </a>
               <a href="#contact">
-                <button className="rounded-full border border-b-2 border-emerald-800 bg-green-500 p-2 px-4 -hue-rotate-30 transition-all duration-75 hover:bg-emerald-600">
+                <button className="rounded-full border border-b-2 border-emerald-800 bg-green-500 p-2 px-4 transition-all duration-75 hover:bg-emerald-600">
                   Contact
                 </button>
               </a>
