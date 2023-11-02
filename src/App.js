@@ -131,6 +131,7 @@ const App = () => {
                 title={"Cooldown"}
                 subtitle={"Full-stack Journal App"}
                 link={"https://usecooldown.com"}
+                thumbnailLink={"https://usecooldown.com"}
                 github={"https://github.com/parmeyjohn/cooldown"}
                 image={"cooldownImage.PNG"}
                 desc={
@@ -156,6 +157,7 @@ const App = () => {
                 title={"Jeanie"}
                 subtitle={"E-commerce App"}
                 image={"jeanieImage.PNG"}
+                thumbnailLink={"https://www.youtube.com/watch?v=CHxTcQiFjGk"}
                 github={"https://github.com/parmeyjohn/ecommerce"}
                 desc={
                   "Full-stack web app prototype for future ecommerce project." +
@@ -183,6 +185,7 @@ const App = () => {
             <Project
               title={"Bapple"}
               subtitle={"Search Engine"}
+              thumbnailLink={"https://dennishc.github.io/bapple.html"}
               image={"bappleImage.PNG"}
               desc={
                 "Web crawler created to index tens of thousands of UCI web pages." +

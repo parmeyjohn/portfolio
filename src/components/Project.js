@@ -11,14 +11,19 @@ const Project = ({
   tags,
   image,
   subtitle,
+  thumbnailLink
 }) => {
   return (
     <div className="z-10 h-fit rounded-xl border-b-8 border-b-blue-400 bg-slate-200 p-6">
-      <img
-        src={require(`../images/${image}`)}
-        alt={`${title} landing page`}
-        className="rounded-xl border-2 border-blue-700 transition-all duration-75 hover:border-blue-500"
-      ></img>
+      <a href={thumbnailLink}>
+        <div className="w-auto h-auto overflow-hidden border-blue-700 hover:border-blue-500 transition-all duration-100 border-2 rounded-xl">
+          <img
+            src={require(`../images/${image}`)}
+            alt={`${title} landing page`}
+            className="transition-all duration-100 hover:scale-125"
+          ></img>
+        </div>
+      </a>
       <div className="flex w-full items-center justify-between pt-3">
         <div className="">
           <h2 className="text-xl text-blue-700">{title}</h2>
